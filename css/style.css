@@ -59,7 +59,7 @@ nav .search-btn{
     cursor: pointer;
     border: 0;
     background-color: transparent;
-    color: rgba(34, 34, 34, 0.897);
+    color: rgba(34, 34, 34, 0.6);
     border-radius: 50%;
     width: calc(var(--size) - 10px);
     height: calc(var(--size)  - 10px);
@@ -77,8 +77,22 @@ header nav .create{
     font-weight: bold;
     
 }
-header nav .profile{
+header nav .nav-pic-icon .profile{
     max-height: 50px;
     border-radius: 100vw;
 
+}
+.online{
+    position: relative;
+}
+.online::after{
+    content:'';
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    background-color: #41db51;
+    border-radius: 50%;
+    border: 2px solid var(--clr-white);
+    width: 10px;
+    height: 10px;
 }
