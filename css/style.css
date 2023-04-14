@@ -9,7 +9,7 @@
     --primary-clr: rgb(7,24,196);
     --clr-white:#fff;
     --clr-dark:color: rgb(44, 44, 44);
-    --inward-size:100px;
+    --inward-size: 2.25em;
 }
 body{
     background-color: var(--background-primary-clr);
@@ -80,11 +80,12 @@ header nav .create{
     border-radius: 15px;
     font-weight: bold;
     min-width: 170px;
+    display: none;
     
 }
 header nav .nav-pic-icon .profile{
     max-height: 50px;
-    border-radius: 100vw;
+    border-radius: 50%;
 
 }
 .online{
@@ -102,48 +103,46 @@ header nav .nav-pic-icon .profile{
     height: 10px;
 }
 .container{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 var(--inward-size);
+    display: grid;
+    grid-template-columns: 1fr; 
     position: relative;
     top: 100px;
-    height: auto;
-    gap: 15px;
+    overflow: hidden;
 }
 .left-sider{
-    max-width: 255px;
-    max-height: 650px;
+    grid-row: 2;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 7px;
-    position: sticky;
-    top: 100px;
+    /* padding: 0 var(--inward-size); */
+    position: fixed;
+    bottom: 0;
+    z-index: 998;
 }
 .left-sider .user{
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--clr-white);
-    padding: 20px;
-    border-radius: 15px;  
-    gap: 1.2em;
-    width: 100%;
+    padding: 1.2em;
+}
+.profile-nameAnduser-name{
+    display: none;
 }
 .left-sider .user img{
-    width: 70px;
-    height: 70px;
+    max-width: 40px;
+    max-height: 40px;
     border-radius: 100vh;
 }
 .left-sider .navigation{
     background-color: var(--clr-white);
-    width: 100%;
-    border-radius: 15px;
+    flex-grow: 1;
+    /* width: 100%; */
     padding: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    
 }
 .left-sider .navigation img{
-    height: 30px;
-    width: 30px;
+    max-height: 30px;
+    max-width: 30px;
     margin-left: 2px;
 }
 .flex{
@@ -162,17 +161,29 @@ header nav .nav-pic-icon .profile{
     background-color: #fafafa;
     border-radius: 30px;
 }
+.left-sider .navigation .Search , .Settings{
+    display: none;
+}
+/* .left-sider h3,.left-sider p{
+    display: block;
+} */
+
+.left-sider .navigation h3{
+    display: none;
+}
+
 .main{
-display: flex;
-flex-direction: column;
-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 .main .storys{
     display: flex;
-    height: 252px;
-    width: 100%;    
+    min-height: 252px;    
     justify-content: space-between;
     gap: 10px;
+    overflow-x: scroll;
     
 }
 
@@ -235,12 +246,12 @@ gap: 20px;
 .main .create-window{
     background-color: white;
     border-radius: 15px;
-    height: 120px;
-    padding: 5px 20px;
+    padding: 5px 1.2em 1.5em;
+    width: 525px;
 }
 .main .create-window .create-section .profile-img{
-    width: 45px;
-    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
     border-radius: 50%;
     
 }
@@ -266,33 +277,126 @@ gap: 20px;
     gap: 15px;
 }
 .main .create-window .create-type img{
-    width: 24px;
-    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+}
+.main .create-window .create-section .share{
+    border: 1px solid var(--background-primary-clr);
+    /* padding: 10px; */
+    height: 40px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: .2em;
+    border-radius: 10px;
+}
+.main .create-window .create-section .share input{
+    width: 85%;
+    border: none;
+    margin-left: .3em;
+    height:90%;
+}.main .create-window .create-section .share button{
+    border: none;
+    padding:3px 10px;
+    border-radius:15px;
+    background-color: var(--primary-clr);
+    color: white;
 }
 
 
 
 
 .card{
-    height: 600px;
+    max-height: 600px;
     background-color: white;
     border-radius: 15px;
+    max-width: 525px;
+    padding: 16px;
+}
+.card .header-section{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.card .header-section .post_identity{
+    display: flex;
+    gap: 25px;
+}
+.card .header-section .post_identity .pro-pic{
+    max-width: 45px;
+    max-height: 45px;
+    border-radius: 50%;
+}
+.card .main_body{
+    display: flex;
+    justify-content: center;
+}
+.card .main_body .posted_pic{
+    max-width: 490px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.card .interactions img{
+    max-width: 30px;
+    max-height: 30px;
+}
+.card .interactions{
+    display: flex;
+    justify-content: space-between;
+}
+.card .interactions .reactions{
+    display: flex;
+    gap: 10px
+}
+.card .about_post{
+    margin-bottom: 10px;
+}
+.card .about_post span{
+    font-weight: bold;
+
+}
+.card .comment_section{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--background-primary-clr);
+    width: 490PX;
+    height: 40px;
+    padding: 8px;
+    position: relative;
+
+}
+.card .comment_section input{
+    position: relative;
+    background-color: var(--background-primary-clr);
+    padding: 8px 0;
+    border: 0;
+    width: 100%;
+    outline: none;
+    font-size: 1   em;
+}
+.card .comment_section img{
+    max-width: 24px;
+    max-height: 24px;
+    position: absolute;
+    right: 15px;
 }
 
 
 .right-sider{
     max-width: 255px;
     max-height: 650px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: start;
     gap: 7px;
-    position: sticky;
-    top: 100px;
+    /* position: sticky;
+    top: 100px; */
     background-color: white;
     padding: 20px;
     border-radius: 25px;
     z-index: -1;
+    display: none;
 }
 .right-sider [class^="request"] [class*="profile-and-mutualFriends"]{
     display: flex;
@@ -329,53 +433,151 @@ gap: 20px;
 }
 
 
-
-@media (max-width:1220px) {
-    .left-sider h3,.left-sider p{
-        display: none;
+@media (min-width: 1220px) {
+    header nav .create{
+        display: block;
+    
     }
     .left-sider{
-        width: 80px;
-        align-items: center;
+        grid-column: 1;
+        flex-direction: column;
+        top: 100px;
+        left: 40px;
+        width: 255px;
+        gap: 7px;
     }
     .left-sider .user{
-        gap: 0;
+        border-radius: 25px;
+        gap: 20px;
+    }
+    .left-sider .navigation {
+        flex-direction: column;
+        border-radius: 25px;
+    }
+    .main{
+        grid-column: 2;
+    }
+
+    .left-sider .user .profile-nameAnduser-name{
+        display: block;
+    }
+    .left-sider .navigation h3{
+        display: inline;
     }
     .left-sider .user img{
         width: 50px;
         height: 50px;
         
     }
+    .container{
+        grid-template-columns: 255px 1fr 255px;
+        gap: 15px;
+    }
+    .container .left-sider .navigation{
+       max-width: 255px;
+    }
+    .container .main{
+        grid-column: 2;
+    }
+    .left-sider .navigation .Search , .Settings{
+        display: flex;
+    }
+    .right-sider{
+        display: flex;
+        grid-column: 3;
+        position: sticky;
+        top: 0px;
+        right: 10px;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1220px) {
+    header nav .create{
+        display: block;
+    
+    }
+    .left-sider{
+        grid-column: 1;
+        flex-direction: column;
+        top: 100px;
+        left: 40px;
+        width: 255px;
+        gap: 7px;
+    }
+    .left-sider .user{
+        border-radius: 25px;
+    }
+    .left-sider .navigation {
+        flex-direction: column;
+        border-radius: 25px;
+    }
+    .main{
+        grid-column: 2;
+    }
+
+    .left-sider .user .profile-nameAnduser-name{
+        display: block;
+    }
+    .left-sider .navigation h3{
+        display: inline;
+    }
+    .left-sider .user img{
+        width: 50px;
+        height: 50px;
+        
+    }
+    .container{
+        grid-template-columns: 255px 1fr;
+    }
+    .container .left-sider .navigation{
+       max-width: 255px;
+    }
+    .container .main{
+        grid-column: 2;
+    }
+    .left-sider .navigation .Search , .Settings{
+        display: flex;
+    }
     
 }
 
 
-@media  (max-width: 968px) {
-    header nav .search-bar{
-    }
-    .search-bar .search-btn{
-    }
+@media  (min-width: 968px) and (max-width: 1000px) {
+   
     header nav .create{
-        display: none;
+        display: block;
     
     }
-    .right-sider{
-        display: none;
+    
+    
+    .container{
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 1fr
     }
     .left-sider{
-        position: fixed;
-        display: flex;
-        flex-direction: row;
-        bottom: 0;
-        z-index: 998;
-        background-color: green;
+        grid-column: 1;
+        flex-direction: column;
+        top: 100px;
+        left: 40px;
+        width: 80px;
+        gap: 7px;
     }
-    .left-sider .navigation{
-        display: flex;
-        width: 1000px;
-        background-color: red;
+    .left-sider .user{
+        border-radius: 25px;
+    }
+    .left-sider .navigation {
+        flex-direction: column;
+        border-radius: 25px;
+    }
+    .main{
+        grid-column: 2;
     }
     .left-sider .navigation .Search , .Settings{
+        display: flex;
+    }
+    .left-sider .navigation h3{
+        display: none;
+    }
+    .left-sider .user .profile-nameAnduser-name{
         display: none;
     }
 }
