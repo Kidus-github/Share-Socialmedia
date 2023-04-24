@@ -1,0 +1,203 @@
+* , ::after , ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-primary-clr:rgb(240, 237, 245);
+    --background-dark-clr: rgb(35, 38, 46);
+    --primary-clr: rgb(7,24,196);
+    --clr-white:#fff;
+    --clr-dark:color: rgb(44, 44, 44);
+}
+body{
+    background-color: var(--background-primary-clr);
+}
+header{
+    background-color: var(--clr-white);
+    /* padding: 10px var(--inward-size); */
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    box-shadow: 0 1px 2px #dbdbdb;
+    display: flex;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2em;
+}
+header nav .logo{
+    background-image: url(/img/logo/logo-no-background.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 10em;
+}
+header nav .login{
+    display: flex;
+    gap: 20px;
+}
+header nav .login input{
+    background-color: var(--background-primary-clr);
+    border: 0;
+    padding: 10px;
+    width: 254px;
+    height: 41px;
+    border-radius: 8px;
+}
+header nav .login .btn{
+    background-color: var(--primary-clr);
+    color: var(--clr-white);
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 0;
+    height: 45px;
+    width: 120px;
+}
+.form{
+    position: absolute;
+    top: 100px;
+    right: 300px;
+    height: 520px;
+    width: 450px;
+    padding: 30px 17px;
+    border-radius: 50px;
+    background-color: var(--clr-white);
+    box-shadow: 0 2px 8px rgb(146, 146, 146);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.right_man{
+    background-image: url(/img/rightMan.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 351px;
+    width: 159px;
+    position: absolute;
+    top: 180px;
+    right: 50px;
+}
+.seating_man{
+    background-image: url(/img/seatingMan.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 206px;
+    width: 183px;
+    position: absolute;
+    top: 350px;
+    left: 350px;
+}
+.two_womens{
+    height: 489px;
+    width: 348px;
+    background-image: url(/img/two_women.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* filter: ; */
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+.form-header{
+    margin-top: -15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form .name{
+    display: flex;
+    gap: 35px;
+}
+.form .name .fname{
+    width: 244px;
+    padding: 0 20px;
+}
+.form .name .lname{
+    width: 255px;
+    padding: 0 20px;
+
+}
+.form input::placeholder{
+    width: 20px;
+    color:#767676;
+}
+/* .form .input */
+.form input{
+    height: 41px;
+    background-color: rgba(7, 24, 196, 9%);
+    border: 0;
+    border-radius: 8px;
+    border: 1px solid #958F8F;
+}
+.form label{
+    font-weight: bold;
+    font-size: 20px;
+}
+.form .gender{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form .gender .male{
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    background-color: rgba(7, 24, 196, 9%);
+    width: 160px;
+    height: 41px;
+    border-radius: 8px;
+    padding: 13px;
+    border:1px solid #958F8F;
+}
+.form .gender .female{
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    background-color: rgba(7, 24, 196, 9%);
+    width: 160px;
+    height: 41px;
+    border-radius: 8px;
+    padding: 13px;
+    border:1px solid #958F8F;
+}
+.form .birth{
+    display: flex;
+    gap: 10px;
+}
+.form .birth select{
+    background-color: rgba(7, 24, 196, 9%);
+    height: 41px;
+    border: 0;
+    border-radius: 8px;
+    width: 160px;
+    padding: 0 10px;
+    border:1px solid #958F8F;
+}
+.form .email_password {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    outline: none;
+}
+.form .email_password .email{
+    padding: 0 15px;
+}
+.form .email_password .password{
+    padding: 0 15px;
+}
+
+
