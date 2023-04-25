@@ -12,15 +12,20 @@
 }
 body{
     background-color: var(--background-primary-clr);
+    
+    position: relative;
+}
+.wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 header{
     background-color: var(--clr-white);
     /* padding: 10px var(--inward-size); */
     width: 100%;
     height: 70px;
-    position: fixed;
-    z-index: 999;
-    inset: 0;
     box-shadow: 0 1px 2px #dbdbdb;
     display: flex;
     justify-content: center;
@@ -32,7 +37,7 @@ nav{
     justify-content: space-around;
     gap: 2em;
 }
-header nav .logo{
+.logo{
     background-image: url(/img/logo/logo-no-background.png);
     background-position: center;
     background-size: contain;
@@ -62,31 +67,71 @@ header nav .login .btn{
     height: 45px;
     width: 120px;
 }
-.form{
-    position: absolute;
-    top: 100px;
-    right: 300px;
-    height: 520px;
-    width: 450px;
+ .main{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+.main .left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+ 
+.main .leftlogin{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+.main .right{
+      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main .right .form{
+    max-height: 535px;
+    max-width: 450px;
     padding: 30px 17px;
     border-radius: 50px;
     background-color: var(--clr-white);
     box-shadow: 0 2px 8px rgb(146, 146, 146);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    margin-left: 105px;
 }
+
 .right_man{
+    
     background-image: url(/img/rightMan.png);
     background-position: center;
     background-size: contain;
     background-repeat:no-repeat;
     height: 351px;
     width: 159px;
-    position: absolute;
-    top: 180px;
-    right: 50px;
+    margin-left: 6rem;
+    
 }
+.right_manlogin{
+    
+    background-image: url(/img/rightMan.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat:no-repeat;
+    height: 351px;
+    width: 159px;
+    margin-left: 6rem;
+    
+}
+
 .seating_man{
     background-image: url(/img/seatingMan.png);
     background-position: center;
@@ -94,9 +139,9 @@ header nav .login .btn{
     background-repeat: no-repeat;
     height: 206px;
     width: 183px;
-    position: absolute;
-    top: 350px;
-    left: 350px;
+    position: relative;
+    top: 150px;
+
 }
 .two_womens{
     height: 489px;
@@ -105,10 +150,7 @@ header nav .login .btn{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    /* filter: ; */
-    position: absolute;
-    top: 80px;
-    left: 80px;
+
 }
 .form-header{
     margin-top: -15px;
@@ -134,7 +176,6 @@ header nav .login .btn{
     width: 20px;
     color:#767676;
 }
-/* .form .input */
 .form input{
     height: 41px;
     background-color: rgba(7, 24, 196, 9%);
@@ -199,5 +240,144 @@ header nav .login .btn{
 .form .email_password .password{
     padding: 0 15px;
 }
+.form p{
+    font-size: .8em;
+    padding: 0 15px ;
+    color: #777777;
+}
+.form .signUp{
+    display: flex;
+    justify-content: center;
+}
+.form .signupBtn{
+    background-color: var(--primary-clr);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 10px;
+    height: 41px;
+    width: 162px;
+    font-weight: bold;
+    font-size: 1.08em;
+}
+
+.hide{
+    display: none;
+}
+.login_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+.login-form{
+    width: 400px;
+    background-color: var(--clr-white);
+    border-radius: 50px;
+    padding: 20px 24px;
+    margin-left: 30px;
+    box-shadow: 0 4px 15px gray;
+    
+}
+.login-form .login{
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+.login-form .login .btn{
+    padding: 0 16px;
+    background-color: var(--primary-clr);
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--clr-white);
+    line-height: 48px;
+
+}
+.form input::placeholder{
+    width: 20px;
+    color:#767676;
+}
+.login-form .login input{
+    padding: 14px 16px;
+    background-color: rgba(7, 24, 196, 9%);
+    border: 0;
+    border-radius: 8px;
+    
+    border: 1px solid #958F8F;
+}
+.login-form .forgotPassword{
+    margin-top: 16px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.login-form .forgotPassword a{
+        text-decoration: none;
+}
+.hr{
+    height: 1px;
+    width: 100%;
+    margin-top: 33px;
+    background-color: #767676;
+}
+.createNew{
+    text-align: center;
+    margin-top: 20px;
+}
+.createNew .create_new{
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    background-color: #42b72a;
+    color: var(--clr-white);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 1215px) {
+    .main .leftlogin{
+        display: none;
+    }
+    
+}
+@media (max-width:642px) {
+    .right_manlogin{
+        display: none;
+    }
+    .login-form{
+        margin: 0;
+    }
+    
+}
+.form_section{
+    backdrop-filter: opacity(10%);
+    background-color: rgb(240, 237, 245 , 85%);
+    width: 100%;
+    height: 100vh;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: none;
+
+}
+.form{
+    max-height: 535px;
+    max-width: 450px;
+    padding: 30px 17px;
+    border-radius: 50px;
+    background-color: var(--clr-white);
+    box-shadow: 0 2px 8px rgb(146, 146, 146);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+    
 
 
