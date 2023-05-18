@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share | Log in | Sign Up </title>
-    <link rel="stylesheet" href="/css/signUp.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/signUp.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -20,46 +22,47 @@
                 <div class="login_section">
                     <div class="logo"></div>
                     <div class="login-form">
-                        <div class="login">
+                        <form class="login" method="post" action="validation.php" novalidate>
                             <div class="error login-error"></div>
                             <input type="text" name="username" placeholder="Username" class="email">
                             <input type="password" name="password" placeholder="Password" class="password">
                             <span><i id="passwordToggler" class="far fa-eye eyetoggle eye-login"></i></span>
-                            <button class="btn">login</button>
-                        </div>
+                            <button class="btn" name="login" type="submit">Log In</button>
+                        </form>
                         <div class="forgotPassword">
-                            <a href="forget_password">Forget password?</a>
+                            <a href="forget_password">Forgot password?</a>
                         </div>
                         <div class="hr"></div>
                         <div class="createNew">
                             <button class="create_new">Create new account</button>
                         </div>
                     </div>
-                    
+                     
                 </div>
                     <div class="right_manlogin"></div>
             </div>
         </div>
         <div class="form_section hide">
-            <form action="Post" class="form">
+            <form action="validation.php" class="form" method="post" autocomplete="off" novalidate>
                 <div class="form-header">
                     <h1>Sign Up</h1>
                     <h4>It's quick and easy.</h4>
                 </div>
+                <div class="hr"></div>
                 <span><i class="far fa-x close"></i></span>
                 <div class="error login-error"></div>
                 <div class="name">
-                    <input type="text" name="firstname" placeholder="First name" class="fname">
-                    <input type="text" name="lastname" placeholder="Last name" class="lname"> 
+                    <input type="text" name="firstname" placeholder="First name" class="fname" required>
+                    <input type="text" name="lastname" placeholder="Last name" class="lname" required> 
                 </div>
                 <div class="email_password">
-                    <input type="text" name="email" placeholder="Mobile number or Email" class="email"/>
-                    <input type="password" name="password" placeholder="New password" class="password"/>
+                    <input type="text" name="email" placeholder="Mobile number or Email" class="email" required/>
+                    <input type="password" name="password" placeholder="New password" class="password" required/>
                     <span><i id="passwordTogglerSignUp" class="far fa-eye eyetoggle eye-signUp"></i></span>
                 </div>
                 <label for="Birthdate">Birthday:</label>
                 <div class="birth">
-                    <select name="month" id="month">
+                    <select name="month" id="month" required>
                         <option value="month">Month</option>
                         <option value="january">Jan</option>
                         <option value="february">Feb</option>
@@ -74,7 +77,7 @@
                         <option value="november">November</option>
                         <option value="december">December</option>
                     </select>
-                    <select name="days" id="days">
+                    <select name="days" id="days" required>
                         <option value="days">Days</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -107,7 +110,7 @@
                         <option value="29">29</option>
                         <option value="30">30</option>
                     </select>
-                    <select name="years" id="years">
+                    <select name="years" id="years"required>
                         <option value="years">Years</option>
                         <option value="1994">1994</option>
                         <option value="1995">1995</option>
@@ -144,11 +147,11 @@
                     <label for="gender">Gender:</label>
                     <div class="gender">
                         <div class="male">
-                            <input type="radio" name="gender" value="male" id="male">
+                            <input type="radio" name="gender" value="M" id="male">
                             <label for="male">Male</label>
                         </div>
                         <div class="female">
-                            <input type="radio" name="gender" value="female" id="female">
+                            <input type="radio" name="gender" value="F" id="female">
                             <label for="female">Female</label>
                         </div>
                     </div>
@@ -157,7 +160,7 @@
                     
                 </div>
                 <div class="signUp">
-                    <button class="signupBtn">Sign Up</button>
+                    <button class="signupBtn" type="submit" name="submit">Sign Up</button>
                 </div>
         
             </form> 

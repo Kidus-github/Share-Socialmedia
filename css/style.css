@@ -21,12 +21,12 @@ body{
 }
 
 .logo{
-    background-image: url(/img/logo/logo-no-background.png);
+    background-image: url(../img/logo/logo.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 2.2em;
-    width: 12em;
+    width: 2.2em;
 }
 header {
     background-color: var(--clr-white);
@@ -61,6 +61,7 @@ header .header_right .search input{
     background-color: transparent;
     height: 100%;
     padding-left: 10px;
+    outline: none;
 }
 .left_sider{
     display: flex;
@@ -143,7 +144,7 @@ header .header_right .search input{
     
 }
 .story1{
-    background-image: url(/img/photos-to-be-used/layer_copy.png);
+    background-image: url(../img/photos-to-be-used/layer_copy.png);
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;
@@ -151,7 +152,7 @@ header .header_right .search input{
 
 }
 .story2{
-    background-image: url(/img/photos-to-be-used/status-1.png);
+    background-image: url(../img/photos-to-be-used/status-1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -159,7 +160,7 @@ header .header_right .search input{
     background-blend-mode:multiply;
 }
 .story3{
-    background-image: url(/img/photos-to-be-used/status-2.png);
+    background-image: url(../img/photos-to-be-used/status-2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -167,21 +168,21 @@ header .header_right .search input{
     background-blend-mode:multiply;
     
 }.story4{
-    background-image: url(/img/photos-to-be-used/status-3.png);
+    background-image: url(../img/photos-to-be-used/status-3.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: gray;
     background-blend-mode:multiply;
 }.story5{
-    background-image: url(/img/photos-to-be-used/status-4.png);
+    background-image: url(../img/photos-to-be-used/status-4.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: gray;
     background-blend-mode:multiply;
 }.story6{
-    background-image: url(/img/photos-to-be-used/biya2.png);
+    background-image: url(../img/photos-to-be-used/biya2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -451,7 +452,7 @@ header .header_right .search input{
         
     }
     .logo-left-nav{
-        background-image: url(/img/logo/logo.png);
+        background-image: url(../img/logo/logo.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -499,9 +500,10 @@ header .header_right .search input{
         display: flex;
         align-items: center;
         gap: 20px;
+        padding-left: 20px;
     }
     .logo-left-nav{
-        background-image: url(/img/logo/logo-no-background.png);
+        background-image: url("../img/logo/logo-no-background.png");
         background-size: cover;
         width: 190px;
         margin: 20px 0 30px -20px;
