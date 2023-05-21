@@ -1,16 +1,30 @@
 // password icon for visible and invisible 
 
-let passwordField = document.querySelector("input[type= 'password']");
-let passwordToggle= document.querySelector(".eyetoggle");
+let passwordFieldLogin = document.querySelector(".login input[type= 'password']");
+let passwordFieldSignup = document.querySelector(".form input[type= 'password']");
 
-passwordToggle.onclick = () =>{
-    if(passwordField.type == "password"){
-        passwordField.type = "text"
-        passwordToggle.style.color = "#0718c4";
+let passwordToggleLogin= document.querySelector(".eye-login");
+let passwordToggleSignup= document.querySelector(".eye-signUp");
+
+passwordToggleLogin.onclick = () =>{
+    if(passwordFieldLogin.type == "password"){
+        passwordFieldLogin.type = "text"
+        passwordToggleLogin.style.color = "#0718c4";
 
     }else{
-        passwordField.type = "password";
-        passwordToggle.style.color = "#958F8F";
+        passwordFieldLogin.type = "password";
+        passwordToggleLogin.style.color = "#958F8F";
+    } 
+}
+
+passwordToggleSignup.onclick = () =>{
+    if(passwordFieldSignup.type == "password"){
+        passwordFieldSignup.type = "text"
+        passwordToggleSignup.style.color = "#0718c4";
+
+    }else{
+        passwordFieldSignup.type = "password";
+        passwordToggleSignup.style.color = "#958F8F";
     } 
 }
 

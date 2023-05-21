@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+/* font-family: 'Inter', sans-serif;
+font-family: 'Roboto', sans-serif; */
 * , ::after , ::before {
     margin: 0;
     padding: 0;
@@ -9,11 +12,13 @@
     --primary-clr: rgb(7,24,196);
     --clr-white:#fff;
     --clr-dark:color: rgb(44, 44, 44);
+    --createhover-clr: #36a420; 
+    --background-primaryHover-clr: rgba(7,24,196,90%);
 }
 body{
     background-color: var(--background-primary-clr);
-    
     position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 .wrapper{
     height: 100vh;
@@ -38,12 +43,14 @@ nav{
     gap: 2em;
 }
 .logo{
-    background-image: url(/img/logo/logo-no-background.png);
+    background-image: url("../img/logo/logo-no-background.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 4em;
     width: 10em;
+    position: relative;
+    left: 20px;
 }
 header nav .login{
     display: flex;
@@ -60,13 +67,17 @@ header nav .login input{
 header nav .login .btn{
     background-color: var(--primary-clr);
     color: var(--clr-white);
-    font-weight: bold;
     font-size: 18px;
     border-radius: 10px;
     border: 0;
     height: 45px;
     width: 120px;
+    transition: background-color 0.3 ease-in-out;
 }
+header nav .login .btn:hover{
+    background-color: var(--background-primaryHover-clr);
+}
+
  .main{
     display: flex;
     justify-content: center;
@@ -111,7 +122,7 @@ header nav .login .btn{
 
 .right_man{
     
-    background-image: url(/img/rightMan.png);
+    background-image: url(../img/rightMan.png);
     background-position: center;
     background-size: contain;
     background-repeat:no-repeat;
@@ -122,7 +133,7 @@ header nav .login .btn{
 }
 .right_manlogin{
     
-    background-image: url(/img/rightMan.png);
+    background-image: url(../img/rightMan.png);
     background-position: center;
     background-size: contain;
     background-repeat:no-repeat;
@@ -133,7 +144,7 @@ header nav .login .btn{
 }
 
 .seating_man{
-    background-image: url(/img/seatingMan.png);
+    background-image: url(../img/seatingMan.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -146,7 +157,7 @@ header nav .login .btn{
 .two_womens{
     height: 489px;
     width: 348px;
-    background-image: url(/img/two_women.png);
+    background-image: url(../img/two_women.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -157,7 +168,12 @@ header nav .login .btn{
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    /* align-items: start; */
+}
+.form-header h4{
+    color:#777777;
+    font-size: .889em;
+    font-weight: 400;
 }
 .form .name{
     display: flex;
@@ -185,7 +201,7 @@ header nav .login .btn{
 }
 .form label{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
 }
 .form .gender{
     display: flex;
@@ -196,30 +212,37 @@ header nav .login .btn{
     display: flex;
     align-items: center;
     gap: 33px;
-    background-color: rgba(7, 24, 196, 9%);
     width: 160px;
     height: 41px;
     border-radius: 8px;
     padding: 13px;
     border:1px solid #958F8F;
+    
+}
+.form .gender input{
+    cursor: pointer;
 }
 .form .gender .female{
     display: flex;
     align-items: center;
     gap: 33px;
-    background-color: rgba(7, 24, 196, 9%);
     width: 160px;
     height: 41px;
     border-radius: 8px;
     padding: 13px;
     border:1px solid #958F8F;
+    cursor: pointer;
+}
+.form .gender label{
+    font-weight: 400;
+    font-size: .9em;
 }
 .form .birth{
     display: flex;
     gap: 10px;
 }
 .form .birth select{
-    background-color: rgba(7, 24, 196, 9%);
+    background-color: transparent;
     height: 41px;
     border: 0;
     border-radius: 8px;
@@ -252,18 +275,23 @@ header nav .login .btn{
     padding: 5px;
 }
 .form .signupBtn{
-    background-color: var(--primary-clr);
+    background-color: #42b72a;
     color: var(--clr-white);
     border: none;
     border-radius: 10px;
     height: 41px;
     width: 162px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.08em;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+.form .signupBtn:hover{
+    background-color: var(--createhover-clr);
 }
 
-
 .login_section{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -303,7 +331,10 @@ header nav .login .btn{
     font-weight: bold;
     color: var(--clr-white);
     line-height: 48px;
-
+    transition: background-color 0.3 ease-in-out;
+}
+.login-form .login .btn:hover{
+    background-color: var(--background-primaryHover-clr);
 }
 .form input::placeholder{
     width: 20px;
@@ -326,11 +357,17 @@ header nav .login .btn{
 .login-form .forgotPassword a{
         text-decoration: none;
 }
+.forgotPassword a:hover{
+    text-decoration: underline;
+}
 .hr{
     height: 1px;
     width: 100%;
     margin-top: 33px;
-    background-color: #767676;
+    background-color: #dadde1;
+}
+.form .hr{
+    margin: 0;
 }
 .createNew{
     text-align: center;
@@ -341,11 +378,15 @@ header nav .login .btn{
     border-radius: 6px;
     font-size: 17px;
     line-height: 48px;
-    padding: 0 16px;
+    padding: 0 18px;
     background-color: #42b72a;
     color: var(--clr-white);
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.create_new:hover{
+    background-color: var(--createhover-clr);
 }
 
 @media (max-width: 1215px) {
@@ -378,13 +419,13 @@ header nav .login .btn{
     /* max-height: 535px; */
     position: relative;
     max-width: 450px;
-    padding: 30px 17px;
+    padding: 20px 17px;
     border-radius: 10px;
     background-color: var(--clr-white);
     box-shadow: 0 2px 8px rgb(146, 146, 146);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 13px;
 }
 .form .close{
     position: absolute;
