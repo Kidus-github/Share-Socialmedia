@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
-/* font-family: 'Inter', sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        /* font-family: 'Inter', sans-serif;
 font-family: 'Roboto', sans-serif; */
 *, ::after , ::before{
     margin: 0;
@@ -383,137 +383,135 @@ header .header_right .search input{
     gap: 15px;
     /* position: sticky;
     top: 100px; */
-    background-color: white;
-    padding: 20px;
-    border-radius: 25px;
-    display: none;
-}
-.right-sider [class^="request"]{
-    width: 100%;
-}
-.right-sider p{
-    font-weight: 200;
-    font-size: 0.8em;
-}
-.right-sider .share{
-    font-size: .9em;
-}
-.right-sider [class^="request"] [class*="profile-and-mutualFriends"]{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 20px;
-    width: 100%;
-    margin-bottom: .5em;
-}
-.right-sider [class^="request"] h3{
-    font-size: 16px;
-
-}
-.right-sider [class^="request"] [class*="profile-and-mutualFriends"] img{
-    width: 45px;
-    height: 45px;
-    border-radius: 100vh;
-
-}
-.right-sider .friend-status{
-    display: flex;
-    justify-content: space-around;
-    gap: 1em;
-}
-
-.right-sider .friend-status button{
-    padding: 4px 15px;
-    border: 0;
-    border-radius: 10px;
-}
-.right-sider .friend-status .accept{
-    background-color: var(--primary-clr);
-    color: var(--clr-white);
-}
-.right-sider .friend-status .decline{
-    border: 1px solid var(--primary-clr);
-    color: var(--primary-clr);
-}
-@media (min-width: 798px) {
-    header{
-        display: none;
-    }
-
-    .left_sider{
-        inset: 0;
-        width: 70px;
-        padding: 0;
-    }
-    .left_sider .navigation{
-        flex-direction: column;
-        padding: 0 10px;
-        align-items: center;
+                background-color: white;
+                padding: 20px;
+                border-radius: 25px;
+                display: none;
+            }
+            .right-sider [class^="request"] {
+                width: 100%;
+            }
+            .right-sider p {
+                font-weight: 200;
+                font-size: 0.8em;
+            }
+            .right-sider .share {
+                font-size: .9em;
+            }
+            .right-sider [class^="request"] [class*="profile-and-mutualFriends"] {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: 20px;
+                width: 100%;
+                margin-bottom: .5em;
+            }
+            .right-sider [class^="request"] h3 {
+                font-size: 16px;
+            }
+            .right-sider [class^="request"] [class*="profile-and-mutualFriends"] img {
+                width: 45px;
+                height: 45px;
+                border-radius: 100vh;
+            }
+            .right-sider .friend-status {
+                display: flex;
+                justify-content: space-around;
+                gap: 1em;
+            }
+            .right-sider .friend-status button {
+                padding: 4px 15px;
+                border: 0;
+                border-radius: 10px;
+            }
+            .right-sider .friend-status .accept {
+                background-color: var(--primary-clr);
+                color: var(--clr-white);
+            }
+            .right-sider .friend-status .decline {
+                border: 1px solid var(--primary-clr);
+                color: var(--primary-clr);
+            }
+            @media (min-width: 798px) {
+                header {
+                    display: none;
+                }
+                .left_sider {
+                    inset: 0;
+                    width: 70px;
+                    padding: 0;
+                }
+                .left_sider .navigation {
+                    flex-direction: column;
+                    padding: 0 10px;
+                    align-items: center;
+                }
+                .logo-left-nav {
+                    background-image: url(/img/logo/logo.png);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 2.9em;
+                    width: 50px;
+                    margin: 20px 0 30px -2px;
+                }
+                #nav-search,
+                #nav-msg,
+                #nav-setting,
+                .nav-logo {
+                    display: block;
+                }
+                .container {
+                    margin-left: 80px;
+                    top: 40px;
+                }
+                .main .create-window .create-type h5 {
+                    display: inline;
+                }
+            }
+            @media (min-width: 968px) {
+                .wrapper {
+                    display: flex;
+                }
+                .right-sider {
+                    display: flex;
+                }
+            }
+            @media (min-width: 1168px) {
+                .wrapper {
+                    margin-right: 50px;
+                }
+                .container {
+                    margin-left: 255px;
+                    top: 40px;
+                }
+                .left_sider {
+                    width: 245px;
+                }
+                .left_sider .navigation h3 {
+                    display: block;
+                }
+                .nav-property {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+                .logo-left-nav {
+                    background-image: url(/img/logo/logo-no-background.png);
+                    background-size: cover;
+                    width: 190px;
+                    margin: 20px 0 30px -20px;
+                }
+                #nav-search,
+                #nav-msg,
+                #nav-setting,
+                .nav-logo {
+                    display: flex;
+                    gap: 20px;
+                }
+                .right-sider {
+                    margin-top: 40px;
+                }
+            }
         
-    }
-    .logo-left-nav{
-        background-image: url(../img/logo/logo.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 2.9em;
-        width: 50px;
-        margin: 20px 0 30px -2px;
-    }
-    #nav-search, #nav-msg, #nav-setting, .nav-logo{
-        display: block;
-    }
-    .container{
-        margin-left: 80px;
-        top: 40px;
-    }
-    .main .create-window .create-type h5{
-        display: inline;
-    }
-    
-}
-@media (min-width: 968px) {
-    .wrapper{
-        display: flex;
-
-    }
-    .right-sider{
-        display: flex;
-    }
-}
-@media (min-width: 1168px) {
-    .wrapper{
-        margin-right: 50px;
-    }
-    .container{
-        margin-left: 255px;
-        top: 40px;
-    }
-    .left_sider{
-        width: 245px;
-    }
-    .left_sider .navigation h3{
-        display: block;
-    }
-    .nav-property{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding-left: 20px;
-    }
-    .logo-left-nav{
-        background-image: url("../img/logo/logo-no-background.png");
-        background-size: cover;
-        width: 190px;
-        margin: 20px 0 30px -20px;
-    }
-    #nav-search, #nav-msg, #nav-setting, .nav-logo{
-        display: flex;
-        gap: 20px;
-    }
-    .right-sider{
-        margin-top: 40px;
-    }
-    
-}
