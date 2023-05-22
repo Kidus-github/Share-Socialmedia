@@ -216,7 +216,7 @@ header .header_right .search input{
     gap: 10px;
     position: relative;
 }
-.main .create-window .hr{
+.hr{
     background-color: #D9D9D9;
     width: 90%;
     height: 2px;

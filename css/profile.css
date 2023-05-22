@@ -1,0 +1,141 @@
+/* .container{
+    background-color: blue;
+} */
+.profile-wrapper{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.even-columns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.profile-pic{
+    background-image: url(/img/photos-to-be-used/biya1.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 100vh;
+    width: 100px;
+    height: 100px;
+    transition: width 500ms ease-in-out, height 500ms ease-in-out;
+}
+.profile-details .edit-profile{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 30px 0px;
+}
+.edit-profile .user_name{
+    font-weight: 300;
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+}
+.edit-profile .btn{
+    background-color: rgba(187, 187, 187, 0.301);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: none;
+
+
+}
+.profile-details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-counts{
+    display: flex;
+    gap: 40px;
+}
+.profile-counts span{
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.profile-user{
+    font-size: 1.2em;
+    font-weight:500;
+}
+.options{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.posts{
+    position: relative;
+    cursor: pointer;
+}
+.saved{
+    position: relative;
+    cursor: pointer;
+}
+.tagged{
+    position: relative;
+    cursor: pointer;
+}
+.posts::after{
+    content: '';
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 2px;
+    background-color: black;
+    top: 50px;
+    left: -5px;
+}
+.saved:hover::after{
+    content: '';
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 2px;
+    background-color: black;
+    top: 50px;
+    left: -5px;
+}
+.tagged:hover::after{
+    content: '';
+    position: absolute;
+    width: calc(100% + 10px);
+    height: 2px;
+    background-color: black;
+    top: 50px;
+    left: -5px;
+}
+@media (min-width: 798px) {
+    .profile-pic{
+        width: 120px;
+        height: 120px;
+    }
+    .even-columns{
+        gap: 2em;
+    }
+    
+}
+
+@media (min-width: 968px)  {
+    .profile-pic{
+        width: 150px;
+        height: 150px;
+    }
+    .even-columns{
+        gap: 4em;
+    }
+    
+}
+@media (min-width: 1168px) {
+    .profile-pic{
+        width: 200px;
+        height: 200px;
+    }
+    .even-columns{
+        gap: 8em;
+    }
+    
+}
