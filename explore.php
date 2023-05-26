@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="/css/explore.css">
+    <link rel="stylesheet" href="css/explore.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <title>share || explore</title>
@@ -35,7 +36,7 @@
 
         <div class="navigation">
             <div class="nav-logo">
-                <a href="#" class="logo-left">
+                <a href="index.php" class="logo-left">
                     <div id="nav-logo" class="logo-left-nav"></div>
                 </a>
             </div>
@@ -252,22 +253,10 @@
         </div>
            
         </div>
-    <script>
-        // var container = document.getElementsByClassName("container");
-        // var btn = document.getElementById("explorebtn");
-        // var span = document.getElementsByClassName("close")[0];
-        // btn.onclick = function() {
-        //     container.style.display = "block";
-        // }
-        // span.onclick = function() {
-        //     container.style.display = "none";
-        // }
-        // window.onclick = function(event) {
-        //     if (event.target == container) {
-        //         container.style.display = "none";
-        //     }
-        // }
-    </script>
+
+    <script type="module" src="js/index.js"></script>
+    <!-- <script type="module" src="js/login-signin.js"></script> -->
 </body>
 
 </html>
+

@@ -1,3 +1,5 @@
+//import from user .js the object diffinition 
+import {User} from './user.js'
 // password icon for visible and invisible 
 
 let passwordFieldLogin = document.querySelector(".login input[type= 'password']");

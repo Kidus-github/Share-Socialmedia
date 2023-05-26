@@ -32,7 +32,7 @@
     display: block;
    }
    .images[data-index="1"]{
-    background-image: url(/img/photos-to-be-used/cheetah.jpg);
+    background-image: url(../img/photos-to-be-used/cheetah.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,7 +40,7 @@
     grid-row: 1;
    }
    .images[data-index="2"]{
-    background-image: url(/img/photos-to-be-used/image3.jpg);
+    background-image: url(../img/photos-to-be-used/image3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -48,7 +48,7 @@
     grid-row: 1;
    }
    .images[data-index="3"]{
-    background-image: url(/img/photos-to-be-used/image5.jpg);
+    background-image: url(../img/photos-to-be-used/image5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -56,7 +56,7 @@
     grid-row: 2;
    }
    .images[data-index="4"]{
-    background-image: url(/img/photos-to-be-used/member-6.png);
+    background-image: url(../img/photos-to-be-used/member-6.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -64,7 +64,7 @@
     grid-row: 2;
    }
    .images[data-index="5"]{
-    background-image: url(/img/photos-to-be-used/member-1.png);
+    background-image: url(../img/photos-to-be-used/member-1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -72,7 +72,7 @@
     grid-row: 3;
    }
    .video[data-index="1"]{
-    background-image: url(/img/photos-to-be-used/biya1.png);
+    background-image: url(../img/photos-to-be-used/biya1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -80,7 +80,7 @@
     grid-row: span 2;
    }
    .video[data-index="2"]{
-    background-image: url(/img/photos-to-be-used/cheetah.jpg);
+    background-image: url(../img/photos-to-be-used/cheetah.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -90,7 +90,7 @@
    
 
    .images[data-index="6"]{
-    background-image: url(/img/photos-to-be-used/dogs.jpg);
+    background-image: url(../img/photos-to-be-used/dogs.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -99,7 +99,7 @@
     grid-row: 3;
    }
    .images[data-index="7"]{
-    background-image: url(/img/photos-to-be-used/photo2.png);
+    background-image: url(../img/photos-to-be-used/photo2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -108,7 +108,7 @@
     grid-row: 4;
    }
    .images[data-index="8"]{
-    background-image: url(/img/photos-to-be-used/cover.png);
+    background-image: url(../img/photos-to-be-used/cover.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

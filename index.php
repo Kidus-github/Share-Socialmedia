@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <link rel="shortcut icon" href="img/logo/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/a32cf472f1.js" crossorigin="anonymous"></script>
     <title>Share || Let's Share </title>
 
 
@@ -35,7 +36,7 @@
         
         <div class="navigation">
             <div class="nav-logo">
-                <a href="#" class="logo-left"><div id="nav-logo" class="logo-left-nav"></div></a>
+                <a href="index.php" class="logo-left"><div id="nav-logo" class="logo-left-nav"></div></a>
             </div>
                 <div class="Home flex nav-property">
                     <img src="img/icons-to-be-used/home2/icons8-home-48.png" class="home-img icon">
@@ -117,16 +118,17 @@
                 <div class="create-section">
                     <img src="img/photos-to-be-used/4.jpg" class="profile-img" >  
                     <div class="share">
-                            <input type="text" placeholder="What's on your mind">
-                            <button>Share</button>
+                            <input type="text" placeholder="What's on your mind" id="share_input">
+                            <button type="submit" class="share_btn">Share</button>
                     </div> 
                 </div>
                <div class="hr"></div> 
                <div class="create-type">
-                    <div class="live-Video" title="live-Video">
+                    <div class="live-Video" title="live-Video" >
                             <img src="img/icons-to-be-used/live-video.png">
                             <h5>Live Video</h5>
                     </div>
+                    <input type="file" name="file-input" id="file_input">
                     <div class="photo-video" title="Photo/Video">
                             <img src="img/icons-to-be-used/photos.png">
                             <h5>Photo/Video</h5>
@@ -338,3 +340,4 @@
     </div>
 </body>
 </html>
+<script type="module" src="js/index.js"></script>

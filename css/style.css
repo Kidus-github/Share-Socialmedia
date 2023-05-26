@@ -11,7 +11,8 @@ font-family: 'Roboto', sans-serif; */
     --background-dark-clr: rgb(35, 38, 46);
     --primary-clr: rgb(7,24,196);
     --clr-white:#fff;
-    --clr-dark:color: rgb(44, 44, 44);
+    --clr-dark: rgb(44, 44, 44);
+    --clr-nav-hover: rgb(242,242,242);
     --inward-size: 1em;
 }
 body{
@@ -91,6 +92,18 @@ header .header_right .search input{
     height: 30px;
     width: 30px;
 }
+.nav-property{
+    cursor: pointer;
+}
+.nav-property:hover{
+    background-color: var(--clr-nav-hover);
+    border-radius: .5em;
+}
+.nav-property:hover .icon{
+    height: 31px;
+    width: 31px;
+    transition: all .3s ease-out;
+}
 #nav-search, #nav-msg, #nav-setting{
     display: none;
 }
@@ -110,6 +123,7 @@ header .header_right .search input{
     min-height: 252px; 
     gap: 10px;
     overflow-x: scroll;
+
 }
 .container .storys [class^="story"]{
     min-width: 100px;
@@ -120,6 +134,7 @@ header .header_right .search input{
     border: 0;
     color: var(--clr-white);
     position: relative;
+    cursor: pointer;
 
 }
 
@@ -132,16 +147,18 @@ header .header_right .search input{
     top: 10px;
     left: 8px;
     z-index: 998;
+    cursor: pointer;
        
 }
 .container .storys [class^="story"] h4{
+    width: 90%;
     text-align: center;
+    word-wrap: break-word;
     position: absolute;
     bottom: 0;
     margin-bottom: 20px;
     margin-left: 5px;
-    margin-right: 5px;
-    
+    margin-right: 5px;    
 }
 .story1{
     background-image: url(../img/photos-to-be-used/layer_copy.png);
@@ -264,7 +281,10 @@ header .header_right .search input{
     background-color: var(--primary-clr);
     color: white;
 }
-
+#file_input{
+    background-color: red;
+    display: none;
+}
 .card{
     
     background-color: white;
@@ -426,14 +446,17 @@ header .header_right .search input{
     padding: 4px 15px;
     border: 0;
     border-radius: 10px;
+    cursor: pointer;
 }
 .right-sider .friend-status .accept{
     background-color: var(--primary-clr);
     color: var(--clr-white);
+    cursor: pointer;
 }
 .right-sider .friend-status .decline{
     border: 1px solid var(--primary-clr);
     color: var(--primary-clr);
+    cursor: pointer;
 }
 @media (min-width: 798px) {
     header{
@@ -450,6 +473,9 @@ header .header_right .search input{
         padding: 0 10px;
         align-items: center;
         
+    }
+    .nav-property{
+        padding: 8px;
     }
     .logo-left-nav{
         background-image: url(../img/logo/logo.png);
@@ -499,9 +525,12 @@ header .header_right .search input{
         width: 100%;
         display: flex;
         align-items: center;
+        padding: 10px 0px 10px 20px;
+        cursor: pointer;
         gap: 20px;
-        padding-left: 20px;
+       
     }
+    
     .logo-left-nav{
         background-image: url("../img/logo/logo-no-background.png");
         background-size: cover;

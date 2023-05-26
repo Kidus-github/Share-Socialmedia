@@ -17,7 +17,7 @@
     gap: 10px;
 }
 .profile-pic{
-    background-image: url(/img/photos-to-be-used/biya1.png);
+    background-image: url(../img/photos-to-be-used/biya1.png);
     background-repeat: no-repeat;
     background-size:cover;
     border-radius: 100vh;
