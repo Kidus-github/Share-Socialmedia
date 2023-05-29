@@ -83,37 +83,37 @@
     <div class="wrapper">  
     <div class="container">
         <!-- <div class="story-container"> -->
-            <div class="storys">
-                    <div class="story1">
-                        <div class="create-stroy">
-                            Create
+            <!-- </div> -->
+            
+            
+            <div class="main">
+                <div class="storys">
+                        <div class="story1">
+                            <div class="create-stroy">
+                                Create
+                            </div>
                         </div>
-                    </div>
-                    <div class="story2">
-                        <img src="img/photos-to-be-used/profile-pic.png" class="story-profile">
-                        <h4>Fisum Yilma</h4>
-                    </div>
-                    <div class="story3">
-                        <img src="img/photos-to-be-used/member-1.png" class="story-profile">
-                        <h4>Almaz Tekle</h4>
-                    </div>
-                    <div class="story4">
-                        <img src="img/photos-to-be-used/photo6.png" class="story-profile">
-                        <h4>Bayenachew Ephrem</h4>
-                    </div>
-                    <div class="story5">
-                        <img src="img/photos-to-be-used/profile.png" class="story-profile">
-                        <h4>Takele Uma</h4>
-                    </div>
-                    <div class="story6">
-                        <img src="img/photos-to-be-used/biya1.png" class="story-profile">
-                        <h4>Ayelech Dechasa</h4>
-                    </div>
-            </div> 
-        <!-- </div> -->
-
-
-        <div class="main">
+                        <div class="story2">
+                            <img src="img/photos-to-be-used/profile-pic.png" class="story-profile">
+                            <h4>Fisum Yilma</h4>
+                        </div>
+                        <div class="story3">
+                            <img src="img/photos-to-be-used/member-1.png" class="story-profile">
+                            <h4>Almaz Tekle</h4>
+                        </div>
+                        <div class="story4">
+                            <img src="img/photos-to-be-used/photo6.png" class="story-profile">
+                            <h4>Bayenachew Ephrem</h4>
+                        </div>
+                        <div class="story5">
+                            <img src="img/photos-to-be-used/profile.png" class="story-profile">
+                            <h4>Takele Uma</h4>
+                        </div>
+                        <div class="story6">
+                            <img src="img/photos-to-be-used/biya1.png" class="story-profile">
+                            <h4>Ayelech Dechasa</h4>
+                        </div>
+                </div> 
             <div class="create-window">
                 <div class="create-section">
                     <img src="img/photos-to-be-used/4.jpg" class="profile-img" >  
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <!-- <div class="card">
                     <div class="header-section">
                         <div class="post_identity">
                             <img src="img/photos-to-be-used/profile-pic.png" class="pro-pic">
@@ -205,6 +205,7 @@
             </div>
         
             <div class="card">
+
                 <div class="header-section">
                     <div class="post_identity">
                         <img src="img/photos-to-be-used/photo5.png" class="pro-pic">
@@ -213,27 +214,31 @@
                             <p>Netherland, kalhashi ocean</p>
                         </div>
                     </div>
+
                     <button class="card-btn">...</button>
                 </div>
+
                 <div class="main_body">
                     <img src="img/photos-to-be-used/feed-image-2.png" class="posted_pic">
                 </div>
                 <div class="interactions">
                     <div class="reactions">
-                        <img src="img/icons-to-be-used/heart-64.png" >
-                        <img src="img/icons-to-be-used/comments-48.png" >
-                        <img src="img/icons-to-be-used/share.png" >
+                        <img src="img/icons-to-be-used/heart-64.png" class="heart icon-reactions">
+                        <img src="img/icons-to-be-used/comments-48.png" class="comment icon-reactions">
+                        <img src="img/icons-to-be-used/share.png" class="share icon-reactions">
                     </div>
-                    <img src="img/icons-to-be-used/bookmark-64.png">
+                    <img src="img/icons-to-be-used/bookmark-64.png" class="bookmarks icon-reactions">
                 </div>
                 <div class="about_post">
-                    <h3>71 likes</h3>
+                    <h3><span class="numOfLikes">71</span> likes</h3>
                     <p><span>Kebede demelash</span>This is a post about animals <a href="#">...more</a></p>
                 </div>
+
                 <div class="comment_section">
-                    <input type="text" class="input_comment" placeholder="Add comments">
-                    <img src="img/icons-to-be-used/feeling.png">
+                    <input type="text" class="input_comment" placeholder="Add comments" id="comment">
+                    <img src="img/icons-to-be-used/feeling.png" class="emoji">
                 </div>
+
             </div>
             <div class="card">
                 <div class="header-section">
@@ -265,10 +270,10 @@
                     <input type="text" class="input_comment" placeholder="Add comments">
                     <img src="img/icons-to-be-used/feeling.png">
                 </div>
-            </div>
-            <div class="loading">
+            </div> -->
+            <!-- <div class="loading">
                 <h1>loading screen</h1>
-            </div>
+            </div> -->
 
         </div>
         
@@ -341,3 +346,5 @@
 </body>
 </html>
 <script type="module" src="js/index.js"></script>
+<script type="module" src="js/post.js"></script>
+<script type="module" src="js/story.js"></script>

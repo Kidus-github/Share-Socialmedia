@@ -1,0 +1,156 @@
+
+
+.wrapper{
+    height: calc(100vh - 54px);
+}
+.msg-section{
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 20% 80%;
+
+}
+.new{
+    background-image: url(/img/icons-to-be-used/new_msg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin: 25px;
+
+}
+.messagerlist{
+    background-color: var(--clr-white);
+    width: 20%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.messagearea{
+    width: 80%;
+}
+.messengers{
+    border-top: 1px solid #ccc;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow-y: scroll;
+    padding-top: 10px ;
+}
+.msg_pro_pic{
+    padding: 4px;
+    border-radius: 100vh;
+    width: 60px;
+    height: 60px;
+}
+.profilepreviewsection{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.profilepreviewsection .profile{
+    border-radius: 100vh;
+    width: 50px;
+    height: 50px;
+}
+.messagearea{
+    display: flex;
+    flex-direction: column;
+}
+.profilePreviewAndCalls{
+    background-color: var(--clr-white);
+    width: 100%;
+    padding: 10px 10px;
+    border:1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+.usernameandtimeline h3{
+    color: var(--clr-dark);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+.usernameandtimeline p{
+    color: #707070;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    
+}
+.phone{
+    display: block;
+    background-image: url(/img/icons-to-be-used/phone-48.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 38px;
+    height: 38px;
+}
+.video{
+    display: block;
+    background-image: url(/img/icons-to-be-used/video-call-48.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 38px;
+    height: 38px;
+}
+.info{
+    display: block;
+    background-image: url(/img/icons-to-be-used/information-24.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin-left: 10px;
+}
+.info::before{
+    content: '';
+    padding: 12px;
+    border-radius: 100vh;
+    border: 2px solid black;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+.calls_info{
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media (min-width: 798px) {
+    .left_sider{
+        width: 70px;
+    }
+    .left_sider .navigation h3{
+        display: none;
+    }
+    .logo-left-nav{
+        background-image: url(../img/logo/logo.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 2.9em;
+        width: 50px;
+        margin: 20px 0 30px -2px;
+    }
+    .nav-property{
+        padding: 8px;
+    }
+    .wrapper{
+        margin: 0;
+        background-color: blue;
+        width: calc(100% - 70px);
+        height: 100vh;
+        position: absolute;
+        right: 0;
+    }
+}

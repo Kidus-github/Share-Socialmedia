@@ -25,3 +25,5 @@ export function User (id,fname, lname, password_hash, email, gender, date_of_bir
         login_count: 0,
     };
 }
+
+

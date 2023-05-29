@@ -14,10 +14,11 @@
     <div class="container">
         <div data-slide="slide" class="slide">
             <div class="slide-items">
-                <img src="./img/photos-to-be-used/status-1.png" >
-                <img src="./img/photos-to-be-used/status-2.png" >
-                <img src="./img/photos-to-be-used/status-3.png" >
-                <img src="./img/photos-to-be-used/status-4.png" >
+                <img src="./img/photos-to-be-used/status-1.png">
+                <img src="./img/photos-to-be-used/status-1.png">
+                <img src="./img/photos-to-be-used/status-1.png">
+                <img src="./img/photos-to-be-used/status-1.png">
+
             </div>
             <nav class="slide-nav">
                 <div class="slide-thumbs"></div>

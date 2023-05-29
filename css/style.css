@@ -160,6 +160,13 @@ header .header_right .search input{
     margin-left: 5px;
     margin-right: 5px;    
 }
+.story{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: gray;
+    background-blend-mode:multiply;
+}
 .story1{
     background-image: url(../img/photos-to-be-used/layer_copy.png);
     background-repeat: no-repeat;
@@ -213,6 +220,7 @@ header .header_right .search input{
     gap: 20px;
     margin-bottom: 150px;
     max-width: 750px;
+    position: relative;
 }
 
 .main .create-window{
@@ -326,6 +334,7 @@ header .header_right .search input{
 .card .main_body{
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 .card .main_body .posted_pic{
     max-width: 100%;
@@ -356,6 +365,10 @@ header .header_right .search input{
     text-transform: capitalize;
 
 }
+.card .about_post .viewcomment{
+    font-size: 0.7em;
+    cursor: pointer;
+}
 .card .comment_section{
     display: flex;
     align-items: center;
@@ -372,7 +385,7 @@ header .header_right .search input{
     background-color: var(--background-primary-clr);
     padding: 8px 0;
     border: 0;
-    width: 100%;
+    width: 93%;
     outline: none;
     font-size: 1em;
 }
@@ -383,11 +396,13 @@ header .header_right .search input{
     right: 15px;
 }
 .main .loading{
+    position: absolute;
     background-color: blue;
     height: 100px;
     width: 100%;
     text-align: center;
     color: white;
+    bottom: 0;
 
 }
 .nav-logo{

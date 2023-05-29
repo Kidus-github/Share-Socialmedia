@@ -6,7 +6,7 @@ let explore = document.getElementsByClassName('Explore');
 let home = document.getElementsByClassName('Home');
 let body= document.getElementsByTagName('body')[0];
 let sharePhoto = document.getElementsByClassName('photo-video');
-let story = document.querySelectorAll('.container .storys[class^="story"]');
+
 
 let profile = document.getElementsByClassName('user')
 
@@ -29,12 +29,10 @@ home[0].addEventListener('click', ()=>{
 sharePhoto[0].addEventListener('click', ()=>{
     document.getElementById('file_input').click();
 });
-story.forEach(element => element.addEventListener('click', ()=>{
-    console.log('story clicked')
-    window.location.assign('story.php');
-    }));
+
 
 //  =
 
 // let user = User('abebe', 'kebede', 'blabla', 'abebe@gmail.com','', '2023-01-23' );
 // console.log(user);
+
