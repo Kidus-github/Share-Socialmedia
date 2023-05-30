@@ -58,11 +58,17 @@
                 <h3>Reels</h3>
             </div>
             <div class="Message nav-property" id="nav-msg">
-                <img src="img/icons-to-be-used/message1/icons8-speech-bubble-50.png" class="message-img icon">
+                <div class="msg">
+                    <p>3+</p>
+                    <img src="img/icons-to-be-used/message1/icons8-speech-bubble-50.png" class="message-img icon" >   
+                </div>
                 <h3>Message</h3>
             </div>
             <div class="Notification nav-property">
-                <img src="img/icons-to-be-used/notification2.1/icons8-favorite-48.png" class="notification-img icon">
+                <div class="notif">
+                    <p>8+</p>
+                    <img src="img/icons-to-be-used/notification2.1/icons8-favorite-48.png" class="notification-img icon">
+                </div>
                 <h3>Notification</h3>
             </div>
             <div class="Create nav-property">

@@ -14,6 +14,7 @@ font-family: 'Roboto', sans-serif; */
     --clr-dark: rgb(44, 44, 44);
     --clr-nav-hover: rgb(242,242,242);
     --inward-size: 1em;
+    --notification-clr: rgb(255, 48, 64);
 }
 body{
     background-color: var(--background-primary-clr);
@@ -104,6 +105,49 @@ header .header_right .search input{
     width: 31px;
     transition: all .3s ease-out;
 }
+.msg{
+    position: relative;
+}
+.msg::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--notification-clr);
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    border-radius: 100vh;
+    border: 1px solid var(--clr-white);
+}
+.msg p{
+    position: absolute;
+    top: -2px;
+    right: -7.5px ;
+    color: var(--clr-white);
+    font-size: 0.75em;
+}
+.notif{
+    position: relative;
+}
+.notif::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--notification-clr);
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    border-radius: 100vh;
+    border: 1px solid var(--clr-white);
+}
+.notif p{
+    position: absolute;
+    top: -2px;
+    right: -7.5px ;
+    color: var(--clr-white);
+    font-size: 0.75em;
+}
+
 #nav-search, #nav-msg, #nav-setting{
     display: none;
 }
@@ -173,46 +217,15 @@ header .header_right .search input{
     background-size:contain;
     background-position: center;
     background-color: rgb(204, 232, 241);
+    position: relative;
 
 }
-.story2{
-    background-image: url(../img/photos-to-be-used/status-1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: gray;
-    background-blend-mode:multiply;
+.stroy1 .create-stroy{
+    position: absolute;
+    /* background-color: red; */
+    bottom: 10px;
 }
-.story3{
-    background-image: url(../img/photos-to-be-used/status-2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: gray;
-    background-blend-mode:multiply;
-    
-}.story4{
-    background-image: url(../img/photos-to-be-used/status-3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: gray;
-    background-blend-mode:multiply;
-}.story5{
-    background-image: url(../img/photos-to-be-used/status-4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: gray;
-    background-blend-mode:multiply;
-}.story6{
-    background-image: url(../img/photos-to-be-used/biya2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: gray;
-    background-blend-mode:multiply;
-}
+
 .main{
     width: 100%;
     display: flex;
@@ -411,19 +424,13 @@ header .header_right .search input{
 
 .right-sider{
     max-width: 300px;
-    max-height: 650px;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: start;
-    gap: 15px;
-    /* position: sticky;
-    top: 100px; */
     background-color: white;
     padding: 20px;
     border-radius: 25px;
     display: none;
 }
 .right-sider [class^="request"]{
+    margin-top: 2px;
     width: 100%;
 }
 .right-sider p{
@@ -519,7 +526,10 @@ header .header_right .search input{
 
     }
     .right-sider{
+        height: 100%;
         display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 }
 @media (min-width: 1168px) {

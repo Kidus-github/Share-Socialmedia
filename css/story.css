@@ -42,12 +42,13 @@ body{
 img {
     display: block;
     max-width: 100%;
+    opacity: 1;
 }
 
 .slide {
     box-shadow: var(--slide-width);
     display: grid;
-    margin: 20px auto;
+    margin: 15px auto;
     max-width: var(--slide-width);
 }
 

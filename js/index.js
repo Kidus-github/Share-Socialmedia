@@ -4,8 +4,10 @@
 
 let explore = document.getElementsByClassName('Explore');
 let home = document.getElementsByClassName('Home');
+let message = document.getElementsByClassName('Message');
 let body= document.getElementsByTagName('body')[0];
 let sharePhoto = document.getElementsByClassName('photo-video');
+
 
 
 let profile = document.getElementsByClassName('user')
@@ -19,7 +21,10 @@ profile[0].addEventListener('click', ()=>{
     console.log('profile clicked');
     window.location.assign("profile.php");
 });
-
+message[0].addEventListener('click', ()=>{
+    console.log('message clicked');
+    window.location.assign("message.php");
+});
 
 home[0].addEventListener('click', ()=>{
     console.log('explore clicked');

@@ -18,7 +18,6 @@
                 <img src="./img/photos-to-be-used/status-1.png">
                 <img src="./img/photos-to-be-used/status-1.png">
                 <img src="./img/photos-to-be-used/status-1.png">
-
             </div>
             <nav class="slide-nav">
                 <div class="slide-thumbs"></div>
@@ -29,6 +28,6 @@
     <div class="logo"></div>
     <div class="close"><i class="far fa-x icon"></i></div>
 </div>
-<script src="js/story.js"></script>
+<script type="module" src="js/storyslider.js"></script>
 </body>
 </html>

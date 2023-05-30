@@ -56,11 +56,17 @@
                     <h3>Reels</h3>
                 </div>
                 <div class="Message nav-property" id="nav-msg">
-                    <img src="img/icons-to-be-used/message1/icons8-speech-bubble-50.png" class="message-img icon" >
+                    <div class="msg">
+                        <p>3+</p>
+                        <img src="img/icons-to-be-used/message1/icons8-speech-bubble-50.png" class="message-img icon" >   
+                    </div>
                     <h3>Message</h3>
                 </div>
                 <div class="Notification nav-property">
-                    <img src="img/icons-to-be-used/notification2.1/icons8-favorite-48.png" class="notification-img icon">
+                    <div class="notif">
+                        <p>8+</p>
+                        <img src="img/icons-to-be-used/notification2.1/icons8-favorite-48.png" class="notification-img icon">
+                    </div>
                     <h3>Notification</h3>
                 </div>
                 <div class="Create nav-property">
@@ -93,26 +99,7 @@
                                 Create
                             </div>
                         </div>
-                        <div class="story2">
-                            <img src="img/photos-to-be-used/profile-pic.png" class="story-profile">
-                            <h4>Fisum Yilma</h4>
-                        </div>
-                        <div class="story3">
-                            <img src="img/photos-to-be-used/member-1.png" class="story-profile">
-                            <h4>Almaz Tekle</h4>
-                        </div>
-                        <div class="story4">
-                            <img src="img/photos-to-be-used/photo6.png" class="story-profile">
-                            <h4>Bayenachew Ephrem</h4>
-                        </div>
-                        <div class="story5">
-                            <img src="img/photos-to-be-used/profile.png" class="story-profile">
-                            <h4>Takele Uma</h4>
-                        </div>
-                        <div class="story6">
-                            <img src="img/photos-to-be-used/biya1.png" class="story-profile">
-                            <h4>Ayelech Dechasa</h4>
-                        </div>
+
                 </div> 
             <div class="create-window">
                 <div class="create-section">
@@ -279,60 +266,62 @@
         
     </div>
         <div class="right-sider">
-            <h3>Requests</h3>
-            <div class="request1">
-                <div class="profile-and-mutualFriends">
-                    <img src="img/photos-to-be-used/member-2.png">
-                    <div class="user-and-mutualFriends">
-                        <h3>James Bond</h3>
-                        <p>8 mutual friends</p>
+        <h3>Requests</h3>
+            <div class="requests">
+                <!-- <div class="request1">
+                    <div class="profile-and-mutualFriends">
+                        <img src="img/photos-to-be-used/member-2.png">
+                        <div class="user-and-mutualFriends">
+                            <h3>James Bond</h3>
+                            <p>8 mutual friends</p>
+                        </div>
+                    </div>
+                    <div class="friend-status">
+                        <button class="accept">Accept</button>
+                        <button class="decline">Decline</button>
                     </div>
                 </div>
-                <div class="friend-status">
-                    <button class="accept">Accept</button>
-                    <button class="decline">Decline</button>
-                </div>
-            </div>
-            <div class="request2">
-                <div class="profile-and-mutualFriends">
-                    <img src="img/photos-to-be-used/Mulatu_Teshome.jpg">
-                    <div class="user-and-mutualFriends">
-                        <h3>Mulatu Teshome</h3>
-                        <p>23 mutual friends</p>
+                <div class="request2">
+                    <div class="profile-and-mutualFriends">
+                        <img src="img/photos-to-be-used/Mulatu_Teshome.jpg">
+                        <div class="user-and-mutualFriends">
+                            <h3>Mulatu Teshome</h3>
+                            <p>23 mutual friends</p>
+                        </div>
+                    </div>
+                    <div class="friend-status">
+                        <button class="accept">Accept</button>
+                        <button class="decline">Decline</button>
                     </div>
                 </div>
-                <div class="friend-status">
-                    <button class="accept">Accept</button>
-                    <button class="decline">Decline</button>
-                </div>
-            </div>
-            <div class="request3">
-                <div class="profile-and-mutualFriends">
-                    <img src="img/photos-to-be-used/Abiy-Ahmed.jpg">
-                    <div class="user-and-mutualFriends">
-                        <h3>Abiy Ahmed</h3>
-                        <p>9 mutual friends</p>
+                <div class="request3">
+                    <div class="profile-and-mutualFriends">
+                        <img src="img/photos-to-be-used/Abiy-Ahmed.jpg">
+                        <div class="user-and-mutualFriends">
+                            <h3>Abiy Ahmed</h3>
+                            <p>9 mutual friends</p>
+                        </div>
+                    </div>
+                    <div class="friend-status">
+                        <button class="accept">Accept</button>
+                        <button class="decline">Decline</button>
                     </div>
                 </div>
-                <div class="friend-status">
-                    <button class="accept">Accept</button>
-                    <button class="decline">Decline</button>
-                </div>
-            </div>
-            <div class="request4">
-                <div class="profile-and-mutualFriends">
-                    <img src="img/photos-to-be-used/shalewerk.jpg">
-                    <div class="user-and-mutualFriends">
-                        <h3>Shalework Zewde</h3>
-                        <p>16 mutual friends</p>
+                <div class="request4">
+                    <div class="profile-and-mutualFriends">
+                        <img src="img/photos-to-be-used/shalewerk.jpg">
+                        <div class="user-and-mutualFriends">
+                            <h3>Shalework Zewde</h3>
+                            <p>16 mutual friends</p>
+                        </div>
                     </div>
-                </div>
-                <div class="friend-status">
-                    <button class="accept">Accept</button>
-                    <button class="decline">Decline</button>
-                </div>
+                    <div class="friend-status">
+                        <button class="accept">Accept</button>
+                        <button class="decline">Decline</button>
+                    </div>
+                </div> -->
             </div>
-            <a href="#">see more</a>
+            <a href="#" class="seemore">see more</a>
             <ul class="share">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Help</a></li>
@@ -348,3 +337,4 @@
 <script type="module" src="js/index.js"></script>
 <script type="module" src="js/post.js"></script>
 <script type="module" src="js/story.js"></script>
+<script type="module" src="js/friends.js"></script>

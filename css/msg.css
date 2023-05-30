@@ -8,11 +8,11 @@
     height: 100%;
     width: 100%;
     display: flex;
-    flex: 20% 80%;
+    /* flex: 20% 80%; */
 
 }
 .new{
-    background-image: url(/img/icons-to-be-used/new_msg.png);
+    background-image: url(../img/icons-to-be-used/new_msg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -39,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-top: 10px ;
 }
 .msg_pro_pic{
@@ -83,36 +83,36 @@
 }
 .phone{
     display: block;
-    background-image: url(/img/icons-to-be-used/phone-48.png);
+    background-image: url(../img/icons-to-be-used/phone-48.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
 }
 .video{
     display: block;
-    background-image: url(/img/icons-to-be-used/video-call-48.png);
+    background-image: url(../img/icons-to-be-used/video-call-48.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
 }
 .info{
     display: block;
-    background-image: url(/img/icons-to-be-used/information-24.png);
+    background-image: url(../img/icons-to-be-used/information-24.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     position: relative;
     margin-left: 10px;
 }
 .info::before{
     content: '';
-    padding: 12px;
+    padding: 10px;
     border-radius: 100vh;
     border: 2px solid black;
     position: absolute;
@@ -122,6 +122,95 @@
 .calls_info{
     display: flex;
     align-items: center;
+    margin-right: 10px;
+}
+.msghiglight{
+    display: none;
+}
+.msghiglight p{
+    color: #707070;
+    font-size: .9em;
+}
+.msghiglight h3{
+    text-transform: capitalize;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+}
+.chat_box{
+    overflow-y: auto;
+    padding: 10px 30px 20px 30px;
+}
+:is(.messengers, .chat_box)::-webkit-scrollbar{
+    width: 0px;
+}
+.chat{
+    margin: 15px 0;
+}
+.chat p{
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: inset 0 0 32px 32px -32px rgba(0, 0, 0, 10%),
+                inset 0 -32px 32px -32px rgba(0, 0, 0, 30%);
+}
+.outgoing{
+    display: flex;
+}
+.outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 150px);
+}
+.outgoing .details p{
+    background: #3856ff ;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+}
+.incoming{
+    display: flex;
+    align-items: flex-end;
+
+}
+.incoming .msgprofile{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+.incoming .details{
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 150px);
+}
+.incoming .details p{
+    background-color: #fff;
+    color: #333;
+    border-radius: 18px 18px 18px 0;
+}
+.typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.typing-area input{
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 1.01em;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.typing-area button{
+    width: 55px;
+    border: none;
+    outline: none;
+    border-radius: 0 5px 0 5px;
+    background-color: var(--primary-clr);
+    color: var(--clr-white);
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 
@@ -147,10 +236,59 @@
     }
     .wrapper{
         margin: 0;
-        background-color: blue;
         width: calc(100% - 70px);
         height: 100vh;
         position: absolute;
         right: 0;
+    }
+    .msg_card{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        
+    }
+    .msghiglight{
+        display: block;
+    }
+    .messagerlist{
+        width: 50%;
+    }
+    .messengers .msg_card{
+        width: 100%;
+        padding-left: 30px;
+    }
+    /* .messagearea{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+    } */
+    .message{
+        overflow-y: auto;
+    }
+   
+    
+}
+@media (min-width: 1168px) {
+    .messagerlist{
+        width: 30%;
+    }
+    .messagearea{
+        width: 70%;
+        flex-direction: row;
+        
+    }
+    
+    .messengers .msg_card{
+        width: 100%;
+        padding-left: 30px;
+    }
+    .message{
+        width: 70%;
+    }
+    .profilePreviewAndCalls{
+        width: 30%;
+        order: 2;
+        flex-direction: column;
     }
 }
