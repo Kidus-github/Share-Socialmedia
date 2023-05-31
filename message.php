@@ -229,4 +229,4 @@
     
 </body>
 </html>
-<script src="js/index.js"></script>
+<script type="module" src="js/index.js"></script>

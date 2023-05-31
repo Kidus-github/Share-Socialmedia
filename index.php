@@ -25,7 +25,10 @@
                     <input type="text" name="search" id="search" placeholder="Search">
                 </div>
                 <div class="header_message">
-                    <img src="img/icons-to-be-used/message1/icons8-speech-bubble-50.png" class="message-img icon">
+                    <div class="msg">
+                        <p>3+</p>
+                        <img src="img/icons-to-be-used/message1/icons8-speech-bubble-50.png" class="message-img icon" >   
+                    </div>
                 </div>      
             </div>
         </nav>

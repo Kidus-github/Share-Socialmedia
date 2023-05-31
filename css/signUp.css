@@ -14,11 +14,13 @@ font-family: 'Roboto', sans-serif; */
     --clr-dark:color: rgb(44, 44, 44);
     --createhover-clr: #36a420; 
     --background-primaryHover-clr: rgba(7,24,196,90%);
+    --error-background-clr: rgb(248, 215, 218);
 }
 body{
     background-color: var(--background-primary-clr);
     position: relative;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 .wrapper{
     height: 100vh;
@@ -170,6 +172,16 @@ header nav .login .btn:hover{
     flex-direction: column;
     /* align-items: start; */
 }
+.error{
+    color: #721c24;
+    background-color: var(--error-background-clr);
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
 .form-header h4{
     color:#777777;
     font-size: .889em;
@@ -258,13 +270,20 @@ header nav .login .btn:hover{
     outline: none;
     position: relative;
 }
+.passdiv{
+    width: 100%;
+    position: relative;
+}
+.passdiv input{
+    width: 100%;
+}
 .form .email_password .email{
     padding: 0 15px;
 }
 .form .email_password .password{
     padding: 0 15px;
 }
-.form p{
+.form .about p{
     font-size: .8em;
     padding: 0 15px ;
     color: #777777;
@@ -406,14 +425,20 @@ header nav .login .btn:hover{
 }
 .form_section{
     
-    background-color: rgb(240, 237, 245 , 85%);
-    width: 100%;
-    height: 100vh;
-    display: flex;  
+    width: 100%; 
+    /* height: 100vh; */
+     display: flex;  
     justify-content: center;
     align-items: center;
+    margin: auto;
     position: absolute;
+    border: 0;
+    top: 20px; 
+    
 
+}
+.form_section::backdrop{
+    background-color: rgb(240, 237, 245 , 85%);
 }
 .form{
     /* max-height: 535px; */
@@ -435,7 +460,7 @@ header nav .login .btn:hover{
     cursor: pointer;
 }
 .eye-login{
-    top: 95px;
+    top: 15px;
     right: 15px;
 }
 .eye-signUp{

@@ -23,11 +23,13 @@
                     <div class="logo"></div>
                     <div class="login-form">
                         <form class="login" method="post" action="validation.php" novalidate>
-                            <div class="error login-error"></div>
+                            <p class="error login-error">This is an error message</p>
                             <input type="text" name="username" placeholder="Username" class="email">
+                            <div class="passdiv">
                             <input type="password" name="password" placeholder="Password" class="password">
                             <span><i id="passwordToggler" class="far fa-eye eyetoggle eye-login"></i></span>
-                            <button class="btn" name="login" type="submit">Log In</button>
+                            </div>
+                            <button class="loginbtn btn" name="submit" type="submit">Log In</button>
                         </form>
                         <div class="forgotPassword">
                             <a href="forget_password">Forgot password?</a>
@@ -42,15 +44,15 @@
                     <div class="right_manlogin"></div>
             </div>
         </div>
-        <div class="form_section hide">
-            <form action="validation.php" class="form" method="post" autocomplete="off" novalidate>
+        <!-- <dialog open class="form_section" id="modal">  
+            <!-- <form  class="form SignUpform" method="dialog" autocomplete="off" novalidate>
                 <div class="form-header">
                     <h1>Sign Up</h1>
                     <h4>It's quick and easy.</h4>
                 </div>
                 <div class="hr"></div>
                 <span><i class="far fa-x close"></i></span>
-                <div class="error login-error"></div>
+                <p class="error signup-error">This is an error message</p>
                 <div class="name">
                     <input type="text" name="firstname" placeholder="First name" class="fname" required>
                     <input type="text" name="lastname" placeholder="Last name" class="lname" required> 
@@ -160,12 +162,12 @@
                     
                 </div>
                 <div class="signUp">
-                    <button class="signupBtn" type="submit" name="submit">Sign Up</button>
+                    <input class="signupBtn" type="submit" value="Sign Up">
                 </div>
         
-            </form> 
-        </div>
+            </form>
+            </dialog> -->
     </div>
-    <script src="js/login-signin.js"></script>
+    <script type="module" src="js/login.js"></script>
 </body>
 </html>
