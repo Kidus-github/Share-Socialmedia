@@ -27,7 +27,7 @@ createNewAccount.onclick = ()=>{
 };
 
 
-const login = document.querySelector(".login");
+let login = document.querySelector(".login");
 let loginbtn = document.querySelector(".loginbtn");
 let loginerror = document.querySelector(".login-error");
 
@@ -36,7 +36,8 @@ login.onsubmit = (e)=>{
     e.preventDefault();//preventing form from submitting automatically
 }
 loginbtn.onclick = () => { 
-    
+    console.log("login clicked");
+
     let xhr = new XMLHttpRequest(); //creating xml object
     xhr.open("post", "login.php", true);
     xhr.onload = () => {
@@ -44,13 +45,14 @@ loginbtn.onclick = () => {
             if(xhr.status == 200){
                 let data = xhr.response; 
                 if(data == "success"){
+                    console.log(data);
                     location.href = "index.php";
                 }else{
                     loginerror.innerHTML = data;
                     loginerror.style.display = "block";
                   
                 }
-                // console.log(data); 
+                console.log(data); 
             }
         }
     }

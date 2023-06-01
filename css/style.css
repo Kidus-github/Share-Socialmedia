@@ -480,6 +480,9 @@ header .header_right .search input{
     color: var(--primary-clr);
     cursor: pointer;
 }
+.hide{
+    display: none;
+}
 @media (min-width: 798px) {
     header{
         display: none;

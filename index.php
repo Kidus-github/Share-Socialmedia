@@ -1,3 +1,12 @@
+
+<?php
+session_start(); 
+if(!isset($_SESSION['id'])){
+    header("location:  ./loginpage.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +24,7 @@
 </head>
 <body>
     <header>
+       
         <nav>
             
                 <a href="#"><div class="logo"></div></a>

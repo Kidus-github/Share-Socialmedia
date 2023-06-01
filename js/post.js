@@ -1,4 +1,21 @@
-export function Post(post_id, user_id, content, media, created_at) {
+import { fetchUserData, userdata } from './index.js';
+
+
+let userid;
+fetchUserData()
+  .then(userdata => {
+    console.log(userdata);
+    userid= userdata.id // Access the userdata
+    // Use the userdata or pass it to other functions
+  }).then(() => {
+    
+  })
+  .catch(error => {
+    console.log('Error:', error);
+  });
+
+// Access the user data  id 
+export function Post(post_id, user_id, content, media, created_at, updated_at, visibility, is_edited, is_deleted, location) {
     return{
         post_id,
         user_id,
@@ -171,8 +188,11 @@ function getLikesCount(post_id){
 
 
 
-let kidusPost = Post(123,345,'abebe  beso belto hodun amemew', "img/photos-to-be-used/horses.jpg", '2023-01-23');
-kidusPost.location = "salitemihret, addis ababa"
+// let kidusPost = Post(123,345,'abebe  beso belto hodun amemew', "img/photos-to-be-used/horses.jpg", '2023-01-23');
+// kidusPost.location = "salitemihret, addis ababa"
+
+
+// create an ajax function to create the array of posts which have holds nesesary values
 
 
 

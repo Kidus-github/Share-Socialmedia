@@ -1,6 +1,6 @@
 <?php
 
-    session_start();
+    // session_start();
     $host="localhost";
     $dbname= "Share";
     $username="root";

@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+    session_start();
     // echo "hello sign up";
     include_once "config.php";
     $fname = mysqli_real_escape_string($conn, $_POST['firstname']);
