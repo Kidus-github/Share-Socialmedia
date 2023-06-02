@@ -36,7 +36,7 @@ login.onsubmit = (e)=>{
     e.preventDefault();//preventing form from submitting automatically
 }
 loginbtn.onclick = () => { 
-    console.log("login clicked");
+    // console.log("login clicked");
 
     let xhr = new XMLHttpRequest(); //creating xml object
     xhr.open("post", "login.php", true);
@@ -45,14 +45,14 @@ loginbtn.onclick = () => {
             if(xhr.status == 200){
                 let data = xhr.response; 
                 if(data == "success"){
-                    console.log(data);
+                    // console.log(data);
                     location.href = "index.php";
                 }else{
                     loginerror.innerHTML = data;
                     loginerror.style.display = "block";
                   
                 }
-                console.log(data); 
+                // console.log(data); 
             }
         }
     }

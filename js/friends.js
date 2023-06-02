@@ -9,7 +9,7 @@ fetchFriends()
             createFriendRequest(element);
         }
       });
-
+      var seemore = document.querySelector('.seemore');
       seemore.addEventListener('click', () => {
     
         if(friend.length > 5){
@@ -30,7 +30,7 @@ fetchFriends()
       console.log('Error:', error);
     });
 
-var seemore = document.querySelector('.right-sider .seemore');
+
 
     
 

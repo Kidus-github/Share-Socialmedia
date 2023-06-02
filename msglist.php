@@ -2,7 +2,7 @@
     session_start();
     include_once "config.php";
     
-    $sql = mysqli_query($conn, "SELECT DISTINCT user.id, user.fname, user.lname, user.profile_picture, message.content AS last_message
+    $sql = mysqli_query($conn, "SELECT DISTINCT user.id, user.fname, user.lname, user.profile_picture, message.content AS last_message, message.recipient_id
                                 FROM user
                                 JOIN message ON user.id = message.sender_id
                                 JOIN (
@@ -23,7 +23,8 @@
                 'fname' => $row['fname'],
                 'lname' => $row['lname'],
                 'profile_picture' => $row['profile_picture'],
-                'last_message' => $row['last_message']
+                'last_message' => $row['last_message'],
+                'recipient_id' => $row['recipient_id']
             );
         }
     }

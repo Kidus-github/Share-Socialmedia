@@ -13,12 +13,14 @@
 
     if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !empty($month) && !empty($day) && !empty($year) && !empty($gender)){
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+
             $sql= mysqli_query($conn, "SELECT email FROM user where email = '{$email}'");
             if(mysqli_num_rows($sql)>0){
                 echo"$email - This email already exist!";
             }else{
+                $currentDate = date('Y-m-d');
                 $sql2 = mysqli_query($conn, "INSERT INTO `user`( `fname`, `lname`, `password_hash`, `email`, `gender`, `date_of_birth`, `created_at`) 
-                VALUES ('{$fname}','{$lname}','{$password}','{$email}', '{$gender}', '{$year}' + '-' + '{$month}' + '-' + '{$day}' , '2023-30-5' )");
+                VALUES ('{$fname}','{$lname}','{$password}','{$email}', '{$gender}', '{$year}' + '-' + '{$month}' + '-' + '{$day}' , '{$currentDate}' )");
 
             if($sql2){
                 $sql3 = mysqli_query($conn, "SELECT * FROM `user` WHERE email = '{$email}'");

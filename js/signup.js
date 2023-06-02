@@ -40,7 +40,7 @@ continuteBtn.onclick = () => {
             if(xhr.status == 200){
                 let data = xhr.response; 
                 if(data == "success"){
-                    location.href = "loginpage.php";
+                    location.href = "index.php";
                 }else{
                     Signuperorr.innerHTML = data;
                     Signuperorr.style.display = "block";

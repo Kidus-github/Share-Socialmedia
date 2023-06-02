@@ -7,6 +7,8 @@ fetch('msglist.php')
     console.log(data); // Print the data to the console
 
     data.forEach((sender)=>{createMessage(sender)});
+
+    
     
     // Access the grouped messages
     // for (const senderId in data) {
@@ -63,8 +65,12 @@ function createMessage(message){
     msg_card.addEventListener('click', (e) =>{
         console.log('msg_card clicked');
         let id =e.target.dataset.userid;
-        open(message.id)
+        open(message.id);
+        let 
+
     });
+
+
 
 
     let msg_pro_pic = document.createElement('img');
@@ -99,9 +105,7 @@ function createMessage(message){
 
 }
 
-function open(id){
-    console.log('opened');
-}
+
 
 function lasttime(){
     return "12hr"
@@ -129,6 +133,62 @@ function lasttime(){
 // ]; 
 
 // Messagearray.forEach((message)=>createMessage(message));
+function open(id){
+    console.log('thie id to be opened is ' + id);
+    // console.log('this it the recipient id ' + recipient_id);
+    setInterval(() =>{
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "get-chat.php", true);
+        xhr.onload = () => {
+            if(xhr.readyState === XMLHttpRequest.DONE) {
+                if(xhr.status === 200){
+                    let data = xhr.response;
+                    chatBox.innerHTML = data;
+                }
+            }
+        }
+        let formData = new FormData(form);
+        //the user id is found form the click of the message list
+        formData.append('incoming_id', id);
+        // formData.append('outgoing_id', recipient_id);
+    
+        xhr.send(formData);
+        
+    }, 500);
+
+    form.onsubmit = (e)=>{
+        e.preventDefault();
+    }
+    
+    sendBtn.onclick = () =>{
+    
+        console.log("send clicked");
+    
+        let xhr = new XMLHttpRequest(); //creating xml object
+        xhr.open("post", "insert-chat.php", true);
+        xhr.onload = () => {
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                if(xhr.status == 200){
+                    input_field.value = '';
+                    let data = xhr.response; 
+                    if(data == "success"){
+                        console.log(data);
+                    }
+                    console.log(data); 
+                }
+            }
+        }
+        let formData = new FormData(form);
+        //the user id is found form the click of the message list
+        formData.append('incoming_id', id);//userId);
+    
+        xhr.send(formData);
+    }
+}
+
+
+
+
 
 
 const form = document.querySelector('.typing-area'),
@@ -136,53 +196,9 @@ input_field = form.querySelector('.input-field'),
 sendBtn = form.querySelector('button'),
 chatBox = document.querySelector('.chat_box');
 
-form.onsubmit = (e)=>{
-    e.preventDefault();
-}
-
-sendBtn.onclick = () =>{
-
-    console.log("send clicked");
-
-    let xhr = new XMLHttpRequest(); //creating xml object
-    xhr.open("post", "insert-chat.php", true);
-    xhr.onload = () => {
-        if(xhr.readyState == XMLHttpRequest.DONE){
-            if(xhr.status == 200){
-                input_field.value = '';
-                let data = xhr.response; 
-                if(data == "success"){
-                    console.log(data);
-                }
-                console.log(data); 
-            }
-        }
-    }
-    let formData = new FormData(form);
-    //the user id is found form the click of the message list
-    formData.append('incoming_id', 8);//userId);
-
-    xhr.send(formData);
-}
 
 
 
-setInterval(() =>{
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "get-chat.php", true);
-    xhr.onload = () => {
-        if(xhr.readyState === XMLHttpRequest.DONE) {
-            if(xhr.status === 200){
-                let data = xhr.response;
-                chatBox.innerHTML = data;
-            }
-        }
-    }
-    let formData = new FormData(form);
-    //the user id is found form the click of the message list
-    formData.append('incoming_id', 8);//userId);
 
-    xhr.send(formData);
-    
-}, 500);
+
 
