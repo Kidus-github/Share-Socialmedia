@@ -1,18 +1,39 @@
-import { fetchUserData, userdata } from './index.js';
+let post = [];
+function fetchPost() {
+    return new Promise((resolve, reject) => {
+      fetch('post.php')
+        .then(response => response.json())
+        .then(data => {
+          for(let i = 0; i < data.length; i++) {
+          post[i] = Post(data[i].post_id,data[i].user_id, data[i].content, data[i].media, data[i].created_at, data[i].updated_at, data[i].visibility, data[i].is_edited, data[i].is_deleted, data[i].location);
+          post[i].fname = data[i].fname;
+          post[i].lname = data[i].lname;
+          post[i].profile_picture = data[i].profile_picture;  
+          }
+          
+          resolve(post);
+      })
+      .catch(error => {
+        reject(error);
+      });
+  });
+}
 
 
-let userid;
-fetchUserData()
-  .then(userdata => {
-    console.log(userdata);
-    userid= userdata.id // Access the userdata
+fetchPost()
+  .then(post => {
+    console.log(post);
+    // userid= userdata.id // Access the userdata
     // Use the userdata or pass it to other functions
+    post.forEach((post)=>{createPostCard(post)});
   }).then(() => {
     
   })
   .catch(error => {
     console.log('Error:', error);
   });
+
+//   console.log(userid);
 
 // Access the user data  id 
 export function Post(post_id, user_id, content, media, created_at, updated_at, visibility, is_edited, is_deleted, location) {
@@ -26,10 +47,15 @@ export function Post(post_id, user_id, content, media, created_at, updated_at, v
         visibility: 'pub',
         is_edited: false,
         is_deleted: false,
-        location: null,
+        location,
     };
 
 }
+let sharePhoto = document.getElementsByClassName('photo-video');
+
+sharePhoto[0].addEventListener('click', ()=>{
+    document.getElementById('file_input').click();
+});
 
 function createPostCard(Post){
     // creates a new card div
@@ -44,12 +70,12 @@ function createPostCard(Post){
 
     let identityimg = document.createElement('img');
     identityimg.classList.add('pro-pic');
-    identityimg.src = getPropic(Post.user_id);
+    identityimg.src = Post.profile_picture;
 
     let identitydisc = document.createElement('div');
     identitydisc.classList.add('pro-name_and_discripton');
     let username = document.createElement('h4');
-    username.innerHTML = getfullname(Post.user_id);
+    username.innerHTML = Post.fname + ' ' + Post.lname;
     let location = document.createElement('p');
     location.innerHTML = Post.location;
 
@@ -122,7 +148,7 @@ function createPostCard(Post){
 
     let content = document.createElement('p');
     let contentspan = document.createElement('span');
-    contentspan.innerHTML = getfullname(Post.user_id);
+    contentspan.innerHTML = Post.fname + ' ' + Post.lname;
 
     content.innerHTML = contentspan.innerHTML + " " + Post.content;
 
@@ -198,10 +224,42 @@ function getLikesCount(post_id){
 
 
 
-let postarr= [
-    Post(123,345,'abebe  beso belto hodun amemew', "img/photos-to-be-used/horses.jpg", '2023-01-23'),
-    Post(123,345,'chala chube chebete', "img/photos-to-be-used/feed-image-2.png", '2023-01-23'),
-    Post(123,345,'abebe  beso belto hodun amemew', "img/photos-to-be-used/horses.jpg", '2023-01-23'),
-    Post(123,345,'abebe  beso belto hodun amemew', "img/photos-to-be-used/horses.jpg", '2023-01-23')
-];
-postarr.forEach((item) =>{createPostCard(item)});
+// let postarr= [
+//     Post(123,345,'abebe  beso belto hodun amemew', "img/photos-to-be-used/horses.jpg", '2023-01-23'),
+//     Post(123,345,'chala chube chebete', "img/photos-to-be-used/feed-image-2.png", '2023-01-23'),
+//     Post(123,345,'abebe  beso belto hodun amemew', "img/photos-to-be-used/horses.jpg", '2023-01-23'),
+//     Post(123,345,'abebe  beso belto hodun amemew', "img/photos-to-be-used/horses.jpg", '2023-01-23')
+// ];
+// postarr.forEach((item) =>{createPostCard(item)});
+
+let createForm = document.querySelector('.create-window');
+let sharebtn = document.querySelector('.share_btn');
+console.log(sharebtn.onclick);
+
+createForm.onsubmit = (e)=> {
+    e.preventDefault();
+}
+// sharebtn.addEventListener('click', ()=>{
+//     console.log('Create share button clicked');
+// });
+
+sharebtn.onclick = ()=>{
+    console.log('Create share button clicked 2');
+    
+        let xhr = new XMLHttpRequest(); //creating xml object
+        xhr.open("post", "createpost.php", true);
+        xhr.onload = () => {
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                if(xhr.status == 200){
+                    let data = xhr.response; 
+                    if(data == "success"){
+                        console.log(data);
+                    }
+                    console.log(data); 
+                }
+            }
+        }
+        let formData = new FormData(createForm);
+    
+        xhr.send(formData);
+}

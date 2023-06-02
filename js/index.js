@@ -7,11 +7,15 @@ let explore = document.getElementsByClassName('Explore');
 let home = document.getElementsByClassName('Home');
 let message = document.getElementsByClassName('Message');
 let body= document.getElementsByTagName('body')[0];
-let sharePhoto = document.getElementsByClassName('photo-video');
+// let sharePhoto = document.getElementsByClassName('photo-video');
 
 
 
-let profile = document.getElementsByClassName('user')
+
+let profile = document.getElementsByClassName('user');
+
+let profilepic = document.getElementsByClassName('profile');
+let profilepic2 = document.getElementsByClassName('profile-img');
 
 explore[0].addEventListener('click', ()=>{
         console.log('explore clicked');
@@ -32,9 +36,9 @@ home[0].addEventListener('click', ()=>{
     window.location.assign("index.php")
 });
 
-sharePhoto[0].addEventListener('click', ()=>{
-    document.getElementById('file_input').click();
-});
+// sharePhoto[0].addEventListener('click', ()=>{
+//     document.getElementById('file_input').click();
+// });
 
 // let userdata, user;
 
@@ -74,7 +78,8 @@ sharePhoto[0].addEventListener('click', ()=>{
 //   console.log(userdata);
 //    userdata // Use the userdata here or pass it to other functions
 // });
-let userdata, friend;
+let userdata;
+let friend = [];
 
 function fetchUserData() {
   return new Promise((resolve, reject) => {
@@ -116,11 +121,19 @@ function fetchFriends() {
         fetch('friends.php')
           .then(response => response.json())
           .then(data => {
-            friend = Friends(data.friendRequest_id, data.user_id, data.friend_id, data.status, data.action_user_id);
-                friend.created_at = data.created_at;
-                friend.updated_at = data.updated_at;
-                friend.is_deleted = data.is_deleted;
-                friend.blocked_at = data.blocked_at;
+            for(let i = 0; i < data.length; i++) {
+            friend[i] = Friends(data[i].friendRequest_id, data[i].user_id, data[i].friend_id, data[i].status, data[i].action_user_id);
+                friend[i].created_at = data[i].created_at;
+                friend[i].updated_at = data[i].updated_at;
+                friend[i].is_deleted = data[i].is_deleted;
+                friend[i].blocked_at = data[i].blocked_at;
+                friend[i].fname = data[i].fname;
+                friend[i].lname = data[i].lname;
+                friend[i].username = data[i].username;
+                friend[i].profile_picture = data[i].profile_picture;
+                friend[i].is_active = data[i].is_active;
+            }
+            
             resolve(friend);
         })
         .catch(error => {
@@ -130,17 +143,33 @@ function fetchFriends() {
 }
     export { fetchFriends, friend };
 
-    fetchFriends()
-    .then(friend => {
-      console.log(friend);
-      // userid= userdata.id // Access the userdata
-      // Use the userdata or pass it to other functions
-    }).then(() => {
+
+let userid;
+fetchUserData()
+  .then(userdata => {
+    profilepic.src = userdata.profile_picture;
+    profilepic2.src = userdata.profile_picture;
+    console.log(userdata);
+    userid= userdata.id // Access the userdata
+    // Use the userdata or pass it to other functions
+  }).then(() => {
+    
+  })
+  .catch(error => {
+    console.log('Error:', error);
+  });
+
+    // fetchFriends()
+    // .then(friend => {
+    //   console.log(friend);
+    //   // userid= userdata.id // Access the userdata
+    //   // Use the userdata or pass it to other functions
+    // }).then(() => {
       
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
+    // })
+    // .catch(error => {
+    //   console.log('Error:', error);
+    // });
 
 //  =
 

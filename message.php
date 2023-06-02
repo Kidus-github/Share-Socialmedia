@@ -74,7 +74,7 @@
                 <div class="new"></div>
                 <div class="messengers">
 
-                    <div class="msg_card">
+                    <!-- <div class="msg_card">
                             <img src="./img/photos-to-be-used/feed-image-1.png" class="msg_pro_pic">
                             <div class="msghiglight">
                                 <h3>umer</h3>
@@ -136,7 +136,7 @@
                             <h3>umer</h3>
                             <p>endet neber tadya <span>1h</span></p>
                         </div>
-                    </div>
+                    </div> -->
                 
                 </div>
             </div>
@@ -157,7 +157,7 @@
                 </nav>
                 <div class="message">
                     <div class="chat_box">
-                        <div class="chat outgoing">
+                        <!-- <div class="chat outgoing">
                             <div class="details">
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, tenetur?</p>
                             </div>
@@ -211,10 +211,10 @@
                             <div class="details">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quas.</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <form action="#" class="typing-area">
-                        <input type="text" name="" id="" placeholder="Type a message here">
+                        <input type="text" name="message" class="input-field" id="" placeholder="Type a message here">
                         <button><i class="fab fa-telegram-plane"></i></button>
 
                     </form>
@@ -230,3 +230,5 @@
 </body>
 </html>
 <script type="module" src="js/index.js"></script>
+<script type="module" src="js/message.js"></script>
+<!-- <script type="module" src="js/chat.js"></script> -->

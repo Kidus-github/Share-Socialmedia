@@ -126,19 +126,24 @@
 }
 .msghiglight{
     display: none;
+    cursor: pointer;
 }
 .msghiglight p{
     color: #707070;
     font-size: .9em;
+    cursor: pointer;
 }
 .msghiglight h3{
     text-transform: capitalize;
     font-size: 1.1em;
     font-weight: 600;
+    cursor: pointer;
 }
 .message{
     display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 }
 .chat_box{
     overflow-y: auto;
@@ -221,6 +226,7 @@
     }
     .left_sider .navigation h3{
         display: none;
+        cursor: pointer;
     }
     .logo-left-nav{
         background-image: url(../img/logo/logo.png);
@@ -245,10 +251,12 @@
         display: flex;
         gap: 10px;
         align-items: center;
+        cursor: pointer;
         
     }
     .msghiglight{
         display: block;
+        cursor: pointer;
     }
     .messagerlist{
         width: 50%;
@@ -256,6 +264,7 @@
     .messengers .msg_card{
         width: 100%;
         padding-left: 30px;
+        
     }
     /* .messagearea{
         height: 100%;
@@ -282,6 +291,7 @@
     .messengers .msg_card{
         width: 100%;
         padding-left: 30px;
+        cursor: pointer;
     }
     .message{
         width: 70%;

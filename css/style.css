@@ -297,10 +297,12 @@ header .header_right .search input{
 }
 .main .create-window .create-section .share button{
     border: none;
-    padding:3px 10px;
+    padding:5px 10px;
     border-radius:15px;
     background-color: var(--primary-clr);
     color: white;
+    cursor: pointer;
+    z-index: 999;
 }
 #file_input{
     background-color: red;
@@ -482,6 +484,11 @@ header .header_right .search input{
 }
 .hide{
     display: none;
+}
+.createlocaion{
+    font-size: 1.1em;
+    color: var(--primary-clr);
+    background-color: red;
 }
 @media (min-width: 798px) {
     header{

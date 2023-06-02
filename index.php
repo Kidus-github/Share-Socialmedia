@@ -16,7 +16,7 @@ if(!isset($_SESSION['id'])){
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="https://kit.fontawesome.com/a32cf472f1.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/a32cf472f1.js" crossorigin="anonymous"></script> -->
     <title>Share || Let's Share </title>
 
 
@@ -103,8 +103,7 @@ if(!isset($_SESSION['id'])){
     <div class="container">
         <!-- <div class="story-container"> -->
             <!-- </div> -->
-            
-            
+
             <div class="main">
                 <div class="storys">
                         <div class="story1">
@@ -114,12 +113,16 @@ if(!isset($_SESSION['id'])){
                         </div>
 
                 </div> 
-            <div class="create-window">
+            <form class="create-window" method="post" enctype="multipart/form-data">
                 <div class="create-section">
                     <img src="img/photos-to-be-used/4.jpg" class="profile-img" >  
                     <div class="share">
-                            <input type="text" placeholder="What's on your mind" id="share_input">
-                            <button type="submit" class="share_btn">Share</button>
+                            <input type="text" placeholder="What's on your mind" id="share_input" name="create">
+                            <div>
+                                <button type="submit" class="share_btn" name="submit" onclick=>Share</button>
+                                <i class="fa-solid fa-location-dot createlocaion "></i>
+
+                            </div>
                     </div> 
                 </div>
                <div class="hr"></div> 
@@ -138,7 +141,7 @@ if(!isset($_SESSION['id'])){
                             <h5>Feeling/Activity</h5>
                     </div>
                 </div>
-            </div>
+            </form>
 
             <!-- <div class="card">
                     <div class="header-section">
