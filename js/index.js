@@ -8,6 +8,7 @@ let home = document.getElementsByClassName('Home');
 let message = document.getElementsByClassName('Message');
 let body= document.getElementsByTagName('body')[0];
 let search = document.querySelector('.Search');
+let reels = document.querySelector('.Reels');
 // let sharePhoto = document.getElementsByClassName('photo-video');
 
 
@@ -40,6 +41,11 @@ home[0].addEventListener('click', ()=>{
     console.log('explore clicked');
     window.location.assign("index.php");
     
+
+});
+reels.addEventListener('click', ()=>{
+    console.log('Reels clicked');
+    window.location.assign("reels.php");
 
 });
 search.addEventListener('click', ()=>{

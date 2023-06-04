@@ -1,0 +1,118 @@
+header{
+    display: none;
+}
+.wrapper{
+    --nav-size : 0px;
+    height: 100vh ;
+    width: calc(100vw - var(--nav-size));
+    margin: 0;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.reels_container{
+    /* background-color: blue; */
+    height:100%;
+    width: 450px;
+    padding: 0 10px;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    margin-bottom: 150px;
+    
+}
+.reels_container::-webkit-scrollbar{
+    display: none;
+}
+.reel{
+    position: relative;
+    margin-top: 4em;
+    height: 37rem;
+    /* border: 1px solid #000; */
+    /* height: 80%; */
+    scroll-snap-align: start;
+    border-radius: 5px;
+}   
+.reels_post{
+    height: 100%;
+}
+.reel .reels_info .user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+.reel .userpropic{
+    width: 40px;
+    height: 40px;
+    border-radius: 100vh;
+}
+.video-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 50px;
+    
+}
+.video-icons a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-clr);
+    text-decoration: none;
+
+}
+.video-icons a i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+.video-icons a i:hover{
+    background-color: rgb(230, 230, 230);
+}
+.reels_container video{
+    width: 85%;
+    height: 100%;
+    outline: none;
+    border: 0;
+
+}
+.reels_content{
+    /* background-color: white; */
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+
+}
+.reels_info{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 30px;
+}
+.reels_info h6{
+    font-size: 1.1em;
+    font-weight: 400;
+
+}
+.reels_info p{
+    font-size: .8em;
+    font-weight: 400;
+
+}
+
+@media (min-width: 768px) {
+    .wrapper{
+        --nav-size:245px;
+        width: calc(100vw - var(--nav-size));
+    }
+}
