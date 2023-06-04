@@ -9,7 +9,7 @@ $sql = mysqli_query($conn, "SELECT posts.*, user.fname , user.lname, user.profil
                     FROM posts 
                     JOIN friends ON posts.user_id = friends.friend_id 
                     JOIN user ON posts.user_id = user.id 
-                    WHERE friends.user_id = '{$userID}'");
+                    WHERE friends.user_id = '{$userID}' and friends.status = 'accepted'");
 
 
   $data = array(); // Initialize an empty array to store the rows

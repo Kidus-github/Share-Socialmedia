@@ -7,6 +7,7 @@ let explore = document.getElementsByClassName('Explore');
 let home = document.getElementsByClassName('Home');
 let message = document.getElementsByClassName('Message');
 let body= document.getElementsByTagName('body')[0];
+let search = document.querySelector('.Search');
 // let sharePhoto = document.getElementsByClassName('photo-video');
 
 
@@ -16,24 +17,42 @@ let profile = document.getElementsByClassName('user');
 
 let profilepic = document.getElementsByClassName('profile');
 let profilepic2 = document.getElementsByClassName('profile-img');
+// let msg= document.querySelector('.msg p');
 
 explore[0].addEventListener('click', ()=>{
         console.log('explore clicked');
         window.location.assign("explore.php");
+
     });
 
 profile[0].addEventListener('click', ()=>{
     console.log('profile clicked');
     window.location.assign("profile.php");
+
 });
 message[0].addEventListener('click', ()=>{
     console.log('message clicked');
     window.location.assign("message.php");
+    
 });
 
 home[0].addEventListener('click', ()=>{
     console.log('explore clicked');
-    window.location.assign("index.php")
+    window.location.assign("index.php");
+    
+
+});
+search.addEventListener('click', ()=>{
+      console.log('search clicked');
+      let search_section= document.querySelector('.search_section');
+      search_section.classList.remove('hide');
+      search_section.classList.add('animate');
+      
+      var head = document.head || document.getElementsByTagName('head')[0];
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'css/search.css';
+      head.appendChild(link);
 });
 
 // sharePhoto[0].addEventListener('click', ()=>{

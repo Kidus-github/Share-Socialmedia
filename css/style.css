@@ -15,6 +15,7 @@ font-family: 'Roboto', sans-serif; */
     --clr-nav-hover: rgb(242,242,242);
     --inward-size: 1em;
     --notification-clr: rgb(255, 48, 64);
+    --Roboto-font: 'Roboto', sans-serif;
 }
 body{
     background-color: var(--background-primary-clr);
@@ -190,7 +191,7 @@ header .header_right .search input{
     position: absolute;
     top: 10px;
     left: 8px;
-    z-index: 998;
+    /* z-index: 998; */
     cursor: pointer;
        
 }

@@ -142,7 +142,7 @@
             </div>
             <div class="messagearea">
                 <nav class="profilePreviewAndCalls" >
-                    <div class="profilepreviewsection">
+                    <!-- <div class="profilepreviewsection">
                         <img src="./img/photos-to-be-used/biya1.png" class="profile" >
                         <div class="usernameandtimeline">
                             <h3>Abel mezgebu</h3>
@@ -153,10 +153,10 @@
                         <div class="phone"></div>
                         <div class="video"></div>
                         <div class="info"></div>
-                    </div>
+                    </div> -->
                 </nav>
                 <div class="message">
-                    <div class="chat_box">
+                    <div class="chat_box" id="scrollable-element">
                         <!-- <div class="chat outgoing">
                             <div class="details">
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, tenetur?</p>
@@ -222,6 +222,87 @@
             </div>
 
         </div>
+
+        <div class="search_section animate hide">
+                 <form action="post" class="search_input">
+                     <div class="content">
+                         <h3>Search</h3>
+                         <div class="input_seciton">
+                             <i class="fa fa-search"></i>
+                             <input type="text" class="search" placeholder="Search">
+                             <i class="fa fa-times"></i>
+                         </div>
+                     </div>
+                 </form>
+                 <div class="results">
+                         <p class="noresult">No Result Found</p>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+    
+                 </div>
+
+            </div> 
         
     </div>
 

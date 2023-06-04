@@ -9,8 +9,8 @@
         if(!empty($message)){
             $currentDate = date('Y-m-d');
             $sql = mysqli_query($conn, 
-            "INSERT INTO `message`(`sender_id`, `recipient_id`, `content`, `timestamp`) 
-            VALUES({$incoming_id}, {$outgoing_id}, '{$message}', '{$currentDate}')") or die(mysqli_error($conn));
+            "INSERT INTO `message`(`sender_id`, `recipient_id`, `content`, `timestamp`, `is_read`) 
+            VALUES({$incoming_id}, {$outgoing_id}, '{$message}', '{$currentDate}', '0')") or die(mysqli_error($conn));
         }
     }else{
         header("location: ./loginpage.php");    

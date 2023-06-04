@@ -100,53 +100,85 @@ if(!isset($_SESSION['id'])){
         </div>
 
     <div class="wrapper">  
-    <div class="container">
-        <!-- <div class="story-container"> -->
-            <!-- </div> -->
+        <div class="container">
+            <!-- <div class="story-container"> -->
+                <!-- </div> -->
 
-            <div class="main">
-                <div class="storys">
-                        <div class="story1">
-                            <div class="create-stroy">
-                                Create
+                <div class="main">
+                    <div class="storys">
+                            <div class="story1">
+                                <div class="create-stroy">
+                                    Create
+                                </div>
                             </div>
+
+                    </div> 
+                <form class="create-window" method="post" enctype="multipart/form-data">
+                    <div class="create-section">
+                        <img src="img/photos-to-be-used/4.jpg" class="profile-img" >  
+                        <div class="share">
+                                <input type="text" placeholder="What's on your mind" id="share_input" name="create">
+                                <div>
+                                    <button type="submit" class="share_btn" name="submit" onclick=>Share</button>
+                                    <i class="fa-solid fa-location-dot createlocaion "></i>
+
+                                </div>
+                        </div> 
+                    </div>
+                <div class="hr"></div> 
+                <div class="create-type">
+                        <div class="live-Video" title="live-Video" >
+                                <img src="img/icons-to-be-used/live-video.png">
+                                <h5>Live Video</h5>
+                        </div>
+                        <input type="file" name="file-input" id="file_input">
+                        <div class="photo-video" title="Photo/Video">
+                                <img src="img/icons-to-be-used/photos.png">
+                                <h5>Photo/Video</h5>
+                        </div>
+                        <div class="feeling-activity" title="Feeling/Activity">
+                                <img src="img/icons-to-be-used/feeling.png">
+                                <h5>Feeling/Activity</h5>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- <div class="card">
+                        <div class="header-section">
+                            <div class="post_identity">
+                                <img src="img/photos-to-be-used/profile-pic.png" class="pro-pic">
+                                <div class="pro-name_and_discripton">
+                                    <h4>kebede demelash</h4>
+                                    <p>Netherland, kalhashi ocean</p>
+                                </div>
+                            </div>
+                            <button class="card-btn">...</button>
+                        </div>
+                        <div class="main_body">
+                            <img src="img/photos-to-be-used/horses.jpg" class="posted_pic">
+                        </div>
+                        <div class="interactions">
+                            <div class="reactions">
+                                <img src="img/icons-to-be-used/heart-64.png" >
+                                <img src="img/icons-to-be-used/comments-48.png" >
+                                <img src="img/icons-to-be-used/share.png" >
+                            </div>
+                            <img src="img/icons-to-be-used/bookmark-64.png">
+                        </div>
+                        <div class="about_post">
+                            <h3>71 likes</h3>
+                            <p><span>Kebede demelash</span>This is a post about animals <a href="#">...more</a></p>
+                        </div>
+                        <div class="comment_section">
+                            <input type="text" class="input_comment" placeholder="Add comments">
+                            <img src="img/icons-to-be-used/feeling.png">
                         </div>
 
-                </div> 
-            <form class="create-window" method="post" enctype="multipart/form-data">
-                <div class="create-section">
-                    <img src="img/photos-to-be-used/4.jpg" class="profile-img" >  
-                    <div class="share">
-                            <input type="text" placeholder="What's on your mind" id="share_input" name="create">
-                            <div>
-                                <button type="submit" class="share_btn" name="submit" onclick=>Share</button>
-                                <i class="fa-solid fa-location-dot createlocaion "></i>
-
-                            </div>
-                    </div> 
                 </div>
-               <div class="hr"></div> 
-               <div class="create-type">
-                    <div class="live-Video" title="live-Video" >
-                            <img src="img/icons-to-be-used/live-video.png">
-                            <h5>Live Video</h5>
-                    </div>
-                    <input type="file" name="file-input" id="file_input">
-                    <div class="photo-video" title="Photo/Video">
-                            <img src="img/icons-to-be-used/photos.png">
-                            <h5>Photo/Video</h5>
-                    </div>
-                    <div class="feeling-activity" title="Feeling/Activity">
-                            <img src="img/icons-to-be-used/feeling.png">
-                            <h5>Feeling/Activity</h5>
-                    </div>
-                </div>
-            </form>
-
-            <!-- <div class="card">
+                <div class="card">
                     <div class="header-section">
                         <div class="post_identity">
-                            <img src="img/photos-to-be-used/profile-pic.png" class="pro-pic">
+                            <img src="img/photos-to-be-used//member-2.png" class="pro-pic">
                             <div class="pro-name_and_discripton">
                                 <h4>kebede demelash</h4>
                                 <p>Netherland, kalhashi ocean</p>
@@ -155,7 +187,75 @@ if(!isset($_SESSION['id'])){
                         <button class="card-btn">...</button>
                     </div>
                     <div class="main_body">
-                        <img src="img/photos-to-be-used/horses.jpg" class="posted_pic">
+                        <img src="img/photos-to-be-used/dogs.jpg" class="posted_pic">
+                    </div>
+                    <div class="interactions">
+                        <div class="reactions">
+                            <img src="img/icons-to-be-used/heart-64.png" >
+                            <img src="img/icons-to-be-used/comments-48.png" >
+                            <img src="img/icons-to-be-used/share.png" >
+                        </div>
+                        <img src="img/icons-to-be-used/bookmark-64.png">
+                    </div>
+                    <div class="about_post">
+                        <h3>71 likes</h3>
+                        <p><span>Amelewerk bezabik</span>This is a post about animals <a href="#">...more</a></p>
+                    </div>
+                    <div class="comment_section">
+                        <input type="text" class="input_comment" placeholder="Add comments">
+                        <img src="img/icons-to-be-used/feeling.png">
+                    </div>
+                </div>
+            
+                <div class="card">
+
+                    <div class="header-section">
+                        <div class="post_identity">
+                            <img src="img/photos-to-be-used/photo5.png" class="pro-pic">
+                            <div class="pro-name_and_discripton">
+                                <h4>kebede demelash</h4>
+                                <p>Netherland, kalhashi ocean</p>
+                            </div>
+                        </div>
+
+                        <button class="card-btn">...</button>
+                    </div>
+
+                    <div class="main_body">
+                        <img src="img/photos-to-be-used/feed-image-2.png" class="posted_pic">
+                    </div>
+                    <div class="interactions">
+                        <div class="reactions">
+                            <img src="img/icons-to-be-used/heart-64.png" class="heart icon-reactions">
+                            <img src="img/icons-to-be-used/comments-48.png" class="comment icon-reactions">
+                            <img src="img/icons-to-be-used/share.png" class="share icon-reactions">
+                        </div>
+                        <img src="img/icons-to-be-used/bookmark-64.png" class="bookmarks icon-reactions">
+                    </div>
+                    <div class="about_post">
+                        <h3><span class="numOfLikes">71</span> likes</h3>
+                        <p><span>Kebede demelash</span>This is a post about animals <a href="#">...more</a></p>
+                    </div>
+
+                    <div class="comment_section">
+                        <input type="text" class="input_comment" placeholder="Add comments" id="comment">
+                        <img src="img/icons-to-be-used/feeling.png" class="emoji">
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="header-section">
+                        <div class="post_identity">
+                            <img src="img/photos-to-be-used/photo4.png" class="pro-pic">
+                            <div class="pro-name_and_discripton">
+                                <h4>ayelech wegderes</h4>
+                                <p>Netherland, kalhashi ocean</p>
+                            </div>
+                        </div>
+                        <button class="card-btn">...</button>
+                    </div>
+                    <div class="main_body">
+                        <img src="img/photos-to-be-used/feed-image-4.png" class="posted_pic">
                     </div>
                     <div class="interactions">
                         <div class="reactions">
@@ -173,180 +273,161 @@ if(!isset($_SESSION['id'])){
                         <input type="text" class="input_comment" placeholder="Add comments">
                         <img src="img/icons-to-be-used/feeling.png">
                     </div>
-
-            </div>
-            <div class="card">
-                <div class="header-section">
-                    <div class="post_identity">
-                        <img src="img/photos-to-be-used//member-2.png" class="pro-pic">
-                        <div class="pro-name_and_discripton">
-                            <h4>kebede demelash</h4>
-                            <p>Netherland, kalhashi ocean</p>
-                        </div>
-                    </div>
-                    <button class="card-btn">...</button>
-                </div>
-                <div class="main_body">
-                    <img src="img/photos-to-be-used/dogs.jpg" class="posted_pic">
-                </div>
-                <div class="interactions">
-                    <div class="reactions">
-                        <img src="img/icons-to-be-used/heart-64.png" >
-                        <img src="img/icons-to-be-used/comments-48.png" >
-                        <img src="img/icons-to-be-used/share.png" >
-                    </div>
-                    <img src="img/icons-to-be-used/bookmark-64.png">
-                </div>
-                <div class="about_post">
-                    <h3>71 likes</h3>
-                    <p><span>Amelewerk bezabik</span>This is a post about animals <a href="#">...more</a></p>
-                </div>
-                <div class="comment_section">
-                    <input type="text" class="input_comment" placeholder="Add comments">
-                    <img src="img/icons-to-be-used/feeling.png">
-                </div>
-            </div>
-        
-            <div class="card">
-
-                <div class="header-section">
-                    <div class="post_identity">
-                        <img src="img/photos-to-be-used/photo5.png" class="pro-pic">
-                        <div class="pro-name_and_discripton">
-                            <h4>kebede demelash</h4>
-                            <p>Netherland, kalhashi ocean</p>
-                        </div>
-                    </div>
-
-                    <button class="card-btn">...</button>
-                </div>
-
-                <div class="main_body">
-                    <img src="img/photos-to-be-used/feed-image-2.png" class="posted_pic">
-                </div>
-                <div class="interactions">
-                    <div class="reactions">
-                        <img src="img/icons-to-be-used/heart-64.png" class="heart icon-reactions">
-                        <img src="img/icons-to-be-used/comments-48.png" class="comment icon-reactions">
-                        <img src="img/icons-to-be-used/share.png" class="share icon-reactions">
-                    </div>
-                    <img src="img/icons-to-be-used/bookmark-64.png" class="bookmarks icon-reactions">
-                </div>
-                <div class="about_post">
-                    <h3><span class="numOfLikes">71</span> likes</h3>
-                    <p><span>Kebede demelash</span>This is a post about animals <a href="#">...more</a></p>
-                </div>
-
-                <div class="comment_section">
-                    <input type="text" class="input_comment" placeholder="Add comments" id="comment">
-                    <img src="img/icons-to-be-used/feeling.png" class="emoji">
-                </div>
-
-            </div>
-            <div class="card">
-                <div class="header-section">
-                    <div class="post_identity">
-                        <img src="img/photos-to-be-used/photo4.png" class="pro-pic">
-                        <div class="pro-name_and_discripton">
-                            <h4>ayelech wegderes</h4>
-                            <p>Netherland, kalhashi ocean</p>
-                        </div>
-                    </div>
-                    <button class="card-btn">...</button>
-                </div>
-                <div class="main_body">
-                    <img src="img/photos-to-be-used/feed-image-4.png" class="posted_pic">
-                </div>
-                <div class="interactions">
-                    <div class="reactions">
-                        <img src="img/icons-to-be-used/heart-64.png" >
-                        <img src="img/icons-to-be-used/comments-48.png" >
-                        <img src="img/icons-to-be-used/share.png" >
-                    </div>
-                    <img src="img/icons-to-be-used/bookmark-64.png">
-                </div>
-                <div class="about_post">
-                    <h3>71 likes</h3>
-                    <p><span>Kebede demelash</span>This is a post about animals <a href="#">...more</a></p>
-                </div>
-                <div class="comment_section">
-                    <input type="text" class="input_comment" placeholder="Add comments">
-                    <img src="img/icons-to-be-used/feeling.png">
-                </div>
-            </div> -->
-            <!-- <div class="loading">
-                <h1>loading screen</h1>
-            </div> -->
-
-        </div>
-        
-    </div>
-        <div class="right-sider">
-        <h3>Requests</h3>
-            <div class="requests">
-                <!-- <div class="request1">
-                    <div class="profile-and-mutualFriends">
-                        <img src="img/photos-to-be-used/member-2.png">
-                        <div class="user-and-mutualFriends">
-                            <h3>James Bond</h3>
-                            <p>8 mutual friends</p>
-                        </div>
-                    </div>
-                    <div class="friend-status">
-                        <button class="accept">Accept</button>
-                        <button class="decline">Decline</button>
-                    </div>
-                </div>
-                <div class="request2">
-                    <div class="profile-and-mutualFriends">
-                        <img src="img/photos-to-be-used/Mulatu_Teshome.jpg">
-                        <div class="user-and-mutualFriends">
-                            <h3>Mulatu Teshome</h3>
-                            <p>23 mutual friends</p>
-                        </div>
-                    </div>
-                    <div class="friend-status">
-                        <button class="accept">Accept</button>
-                        <button class="decline">Decline</button>
-                    </div>
-                </div>
-                <div class="request3">
-                    <div class="profile-and-mutualFriends">
-                        <img src="img/photos-to-be-used/Abiy-Ahmed.jpg">
-                        <div class="user-and-mutualFriends">
-                            <h3>Abiy Ahmed</h3>
-                            <p>9 mutual friends</p>
-                        </div>
-                    </div>
-                    <div class="friend-status">
-                        <button class="accept">Accept</button>
-                        <button class="decline">Decline</button>
-                    </div>
-                </div>
-                <div class="request4">
-                    <div class="profile-and-mutualFriends">
-                        <img src="img/photos-to-be-used/shalewerk.jpg">
-                        <div class="user-and-mutualFriends">
-                            <h3>Shalework Zewde</h3>
-                            <p>16 mutual friends</p>
-                        </div>
-                    </div>
-                    <div class="friend-status">
-                        <button class="accept">Accept</button>
-                        <button class="decline">Decline</button>
-                    </div>
                 </div> -->
+                <!-- <div class="loading">
+                    <h1>loading screen</h1>
+                </div> -->
+
             </div>
-            <a href="#" class="seemore">see more</a>
-            <ul class="share">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Teams</a></li>
-                <li><a href="#">Language</a></li>
-                <li><a href="#">&copy;2023 Share By kidus Girma and Freezer</a></li>
-            </ul>
+            
         </div>
+            <div class="right-sider">
+                <h3>Requests</h3>
+                    <div class="requests">
+                        <!-- <div class="request1">
+                            <div class="profile-and-mutualFriends">
+                                <img src="img/photos-to-be-used/member-2.png">
+                                <div class="user-and-mutualFriends">
+                                    <h3>James Bond</h3>
+                                    <p>8 mutual friends</p>
+                                </div>
+                            </div>
+                            <div class="friend-status">
+                                <button class="accept">Accept</button>
+                                <button class="decline">Decline</button>
+                            </div>
+                        </div>
+                        <div class="request2">
+                            <div class="profile-and-mutualFriends">
+                                <img src="img/photos-to-be-used/Mulatu_Teshome.jpg">
+                                <div class="user-and-mutualFriends">
+                                    <h3>Mulatu Teshome</h3>
+                                    <p>23 mutual friends</p>
+                                </div>
+                            </div>
+                            <div class="friend-status">
+                                <button class="accept">Accept</button>
+                                <button class="decline">Decline</button>
+                            </div>
+                        </div>
+                        <div class="request3">
+                            <div class="profile-and-mutualFriends">
+                                <img src="img/photos-to-be-used/Abiy-Ahmed.jpg">
+                                <div class="user-and-mutualFriends">
+                                    <h3>Abiy Ahmed</h3>
+                                    <p>9 mutual friends</p>
+                                </div>
+                            </div>
+                            <div class="friend-status">
+                                <button class="accept">Accept</button>
+                                <button class="decline">Decline</button>
+                            </div>
+                        </div>
+                        <div class="request4">
+                            <div class="profile-and-mutualFriends">
+                                <img src="img/photos-to-be-used/shalewerk.jpg">
+                                <div class="user-and-mutualFriends">
+                                    <h3>Shalework Zewde</h3>
+                                    <p>16 mutual friends</p>
+                                </div>
+                            </div>
+                            <div class="friend-status">
+                                <button class="accept">Accept</button>
+                                <button class="decline">Decline</button>
+                            </div>
+                        </div> -->
+                    </div>
+                <a href="#" class="seemore">see more</a>
+                <ul class="share">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Teams</a></li>
+                    <li><a href="#">Language</a></li>
+                    <li><a href="#">&copy;2023 Share By kidus Girma and Freezer</a></li>
+                </ul>
+            </div>
+            
+            <div class="search_section animate hide">
+                 <form action="post" class="search_input">
+                     <div class="content">
+                         <h3>Search</h3>
+                         <div class="input_seciton">
+                             <i class="fa fa-search"></i>
+                             <input type="text" class="search" placeholder="Search">
+                             <i class="fa fa-times"></i>
+                         </div>
+                     </div>
+                 </form>
+                 <div class="results">
+                         <p class="noresult">No Result Found</p>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+                     <div class="result-card">
+                         <img src="./img/photos-to-be-used/feed-image-1.png" class="pro_pic">
+                             <div class="result">
+                                 <h3>username</h3>
+                                 <p>name</p>
+                             </div>
+                     </div>
+    
+                 </div>
+
+            </div>   
     </div>
 </body>
 </html>

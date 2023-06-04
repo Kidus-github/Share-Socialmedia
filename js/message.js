@@ -56,7 +56,6 @@ export function Message (msg_id, sender_id, recipient_id, content, timestamp, is
         reply_to_id
     };
 }
-
 function createMessage(message){
     let msg_card = document.createElement('div');
     msg_card.classList.add('msg_card');
@@ -65,8 +64,14 @@ function createMessage(message){
     msg_card.addEventListener('click', (e) =>{
         console.log('msg_card clicked');
         let id =e.target.dataset.userid;
+        let chatbox = document.querySelector('.chat_box');
+        chatbox.classList.remove('hide');
+        let typing_area = document.querySelector('.typing-area');
+        typing_area.classList.remove('hide');
         open(message.id);
-        let 
+        profile_show(message);
+        
+
 
     });
 
@@ -105,6 +110,58 @@ function createMessage(message){
 
 }
 
+function profile_show(message){
+    // if(isclicked){
+        let profilepreviewsection = document.createElement('div');
+        profilepreviewsection.classList.add('profilepreviewsection');
+
+        let profile = document.createElement('img');
+        profile.src = message.profile_picture;
+        profile.classList.add('profile');
+
+        let usernameandtimeline = document.createElement('div');
+        usernameandtimeline.classList.add('usernameandtimeline');
+
+        let username = document.createElement('h3');
+        let timeline = document.createElement('p');
+
+        username.innerHTML =  message.fname + ' ' + message.lname;
+        timeline.innerHTML = 'Active ' + lasttime() + ' ago';
+
+        profilepreviewsection.appendChild(profile);
+        profilepreviewsection.appendChild(usernameandtimeline);
+
+        usernameandtimeline.appendChild(username);
+        usernameandtimeline.appendChild(timeline);
+
+        let calls_info = document.createElement('div');
+        calls_info.classList.add('calls_info');
+
+        let phone = document.createElement('div');
+        phone.classList.add('phone');
+        let video = document.createElement('div');
+        video.classList.add('video');
+        let info = document.createElement('div');
+        info.classList.add('info');
+
+        calls_info.appendChild(phone);
+        calls_info.appendChild(video);
+        calls_info.appendChild(info);
+
+
+        let profilePreviewAndCalls = document.querySelector('.profilePreviewAndCalls');
+        profilePreviewAndCalls.appendChild(profilepreviewsection);
+        profilePreviewAndCalls.appendChild(calls_info);
+    // }
+    // isclicked = false;
+}
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const scrollableElement = document.getElementById('scrollable-element');
+//     scrollableElement.scrollTop = scrollableElement.scrollHeight;
+//   });
+
+
 
 
 function lasttime(){
@@ -134,7 +191,7 @@ function lasttime(){
 
 // Messagearray.forEach((message)=>createMessage(message));
 function open(id){
-    console.log('thie id to be opened is ' + id);
+    console.log('this id is opened  ' + id);
     // console.log('this it the recipient id ' + recipient_id);
     setInterval(() =>{
         let xhr = new XMLHttpRequest();

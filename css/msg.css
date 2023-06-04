@@ -11,6 +11,7 @@
     /* flex: 20% 80%; */
 
 }
+
 .new{
     background-image: url(../img/icons-to-be-used/new_msg.png);
     background-repeat: no-repeat;
@@ -18,7 +19,7 @@
     background-size: contain;
     width: 40px;
     height: 40px;
-    margin: 25px;
+    margin:  25px 25px 6px;
 
 }
 .messagerlist{
@@ -65,12 +66,13 @@
 .profilePreviewAndCalls{
     background-color: var(--clr-white);
     width: 100%;
-    padding: 10px 10px;
+    padding: 10px 5px;
     border:1px solid #ccc;
     display: flex;
     justify-content: space-between;
 }
 .usernameandtimeline h3{
+    text-transform: capitalize;
     color: var(--clr-dark);
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
@@ -144,10 +146,13 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    height: calc(100% - 70px);
 }
 .chat_box{
     overflow-y: auto;
     padding: 10px 30px 20px 30px;
+    
+    
 }
 :is(.messengers, .chat_box)::-webkit-scrollbar{
     width: 0px;
@@ -274,6 +279,7 @@
     } */
     .message{
         overflow-y: auto;
+        height: 100%;
     }
    
     
@@ -300,5 +306,15 @@
         width: 30%;
         order: 2;
         flex-direction: column;
+    }
+    .profilepreviewsection{
+        flex-direction: column;
+        
+    }
+    .profilepreviewsection .profile{
+        /* border-radius: 0; */
+        width: 100%;
+        height: 250px;
+
     }
 }
