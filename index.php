@@ -435,3 +435,4 @@ if(!isset($_SESSION['id'])){
 <script type="module" src="js/post.js"></script>
 <script type="module" src="js/story.js"></script>
 <script type="module" src="js/friends.js"></script>
+<script type="module" src="js/search.js"></script>

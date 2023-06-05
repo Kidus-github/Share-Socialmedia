@@ -109,6 +109,11 @@ header{
     font-weight: 400;
 
 }
+video::-webkit-media-controls-fullscreen-button, 
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display{
+    display: none;
+}
 
 @media (min-width: 768px) {
     .wrapper{

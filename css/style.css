@@ -369,6 +369,9 @@ header .header_right .search input{
     display: flex;
     gap: 10px
 }
+.card .interactions .reactions img{
+    cursor: pointer;
+}
 .card .about_post{
     margin-bottom: 10px;
 }

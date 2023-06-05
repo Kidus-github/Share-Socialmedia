@@ -78,6 +78,7 @@ function createPostCard(Post){
     username.innerHTML = Post.fname + ' ' + Post.lname;
     let location = document.createElement('p');
     location.innerHTML = Post.location;
+    
 
 
     identitydisc.appendChild(username);
@@ -113,6 +114,20 @@ function createPostCard(Post){
     let heart = document.createElement('img');
     heart.src ="img/icons-to-be-used/heart-64.png";
     heart.classList.add('heart', 'icon-reactions');
+    heart.setAttribute('data-postId',  (Post.post_id).toString());
+
+    heart.addEventListener('click', (e) =>{
+        console.log('hello');
+        let id = e.target.dataset.postid;
+        if(heart.src == "img/icons-to-be-used/heart-64.png"){
+            heart.src ="img/icons-to-be-used/heart-48.png";
+            Like(id);
+        }else{
+            heart.src = "img/icons-to-be-used/heart-64.png"
+            UnlikeLike(id);
+        }
+
+    });
 
     let comment= document.createElement('img');
     comment.src = "img/icons-to-be-used/comments-48.png";
@@ -196,19 +211,62 @@ function createPostCard(Post){
 }
 
 
-//edit this 
-function getfullname(user_id){
-    return "kidus girma";
-}
-function getPropic(user_id){
-    return "img/photos-to-be-used//member-2.png";
-}
-
 function getcommentnum(post_id){
     return 28;
 }
-function getLikesCount(post_id){
-    return 63;
+function getLikesCount(id){
+    let xhr = new XMLHttpRequest(); //creating xml object
+        xhr.open("post", "countlike.php", true);
+        xhr.onload = () => {
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                if(xhr.status == 200){
+                    let data = xhr.response; 
+                    return data;      
+                }
+            }
+        }
+    
+        xhr.send('post_id=' + id);
+    // return 63;
+}
+
+function Like(id){
+    console.log('liked');
+    
+        let xhr = new XMLHttpRequest(); //creating xml object
+        xhr.open("post", "like.php", true);
+        xhr.onload = () => {
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                if(xhr.status == 200){
+                    let data = xhr.response; 
+                    if(data == "success"){
+                        console.log(data);
+                    }
+                    console.log(data); 
+                }
+            }
+        }
+    
+        xhr.send('post_id=' + id);
+}
+function UnlikeLike(id){
+    console.log('dislike');
+    
+        let xhr = new XMLHttpRequest(); //creating xml object
+        xhr.open("post", "unlike.php", true);
+        xhr.onload = () => {
+            if(xhr.readyState == XMLHttpRequest.DONE){
+                if(xhr.status == 200){
+                    let data = xhr.response; 
+                    if(data == "success"){
+                        console.log(data);
+                    }
+                    console.log(data); 
+                }
+            }
+        }
+    
+        xhr.send('post_id=' + id);
 }
 
 

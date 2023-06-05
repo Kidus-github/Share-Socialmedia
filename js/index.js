@@ -59,6 +59,15 @@ search.addEventListener('click', ()=>{
       link.rel = 'stylesheet';
       link.href = 'css/search.css';
       head.appendChild(link);
+
+      let searchinput = document.getElementById('search');
+      console.log(searchinput);
+      searchinput.onkeyup = () =>{
+        
+         let searchText= searchinput.value;
+         
+      };    
+
 });
 
 // sharePhoto[0].addEventListener('click', ()=>{
