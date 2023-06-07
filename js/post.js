@@ -8,7 +8,8 @@ function fetchPost() {
           post[i] = Post(data[i].post_id,data[i].user_id, data[i].content, data[i].media, data[i].created_at, data[i].updated_at, data[i].visibility, data[i].is_edited, data[i].is_deleted, data[i].location);
           post[i].fname = data[i].fname;
           post[i].lname = data[i].lname;
-          post[i].profile_picture = data[i].profile_picture;  
+          post[i].profile_picture = data[i].profile_picture; 
+          post[i].is_liked = data[i].is_liked; 
           }
           
           resolve(post);
@@ -26,8 +27,6 @@ fetchPost()
     // userid= userdata.id // Access the userdata
     // Use the userdata or pass it to other functions
     post.forEach((post)=>{createPostCard(post)});
-  }).then(() => {
-    
   })
   .catch(error => {
     console.log('Error:', error);
@@ -112,22 +111,49 @@ function createPostCard(Post){
     let reactions = document.createElement('div');
 
     let heart = document.createElement('img');
-    heart.src ="img/icons-to-be-used/heart-64.png";
+    let dislike = "img/icons-to-be-used/heart-64.png", 
+    liked = "img/icons-to-be-used/heart-48.png";
+    
+    if(Post.is_liked === '1'){
+        console.log(Post.is_liked);
+        heart.src = liked;
+    }else{
+        // console.log(Post.is_liked);
+        heart.src = dislike;
+    }
+    
+    
     heart.classList.add('heart', 'icon-reactions');
     heart.setAttribute('data-postId',  (Post.post_id).toString());
 
-    heart.addEventListener('click', (e) =>{
+    heart.onclick = (e) =>{
         console.log('hello');
         let id = e.target.dataset.postid;
-        if(heart.src == "img/icons-to-be-used/heart-64.png"){
-            heart.src ="img/icons-to-be-used/heart-48.png";
+        console.log(heart.src);
+        if(heart.src === "http://localhost/share/img/icons-to-be-used/heart-64.png"){
+            heart.src = liked;
             Like(id);
-        }else{
-            heart.src = "img/icons-to-be-used/heart-64.png"
+            let increment = parseInt(numberoflikes.innerHTML);
+            increment++;
+
+            numberoflikes.innerHTML = increment.toString();
+            // console.log(increment.toString());
+
+            usercontent.innerHTML = numberoflikes.innerHTML + ' Likes';
+        }
+        else{
+            heart.src = dislike
             UnlikeLike(id);
+            let decrement = parseInt(numberoflikes.innerHTML);
+            decrement--;
+
+            numberoflikes.innerHTML = decrement.toString();
+            // console.log(increment.toString());
+
+            usercontent.innerHTML = numberoflikes.innerHTML + ' Likes';
         }
 
-    });
+    };
 
     let comment= document.createElement('img');
     comment.src = "img/icons-to-be-used/comments-48.png";
@@ -157,9 +183,13 @@ function createPostCard(Post){
     let usercontent = document.createElement('h3');
     let numberoflikes = document.createElement('span');
     numberoflikes.classList.add('numOfLikes');
-    numberoflikes.innerHTML = `${getLikesCount(Post.post_id)}`
 
-    usercontent.innerHTML = numberoflikes.innerHTML + ' Likes';
+    getLikesCount(Post.post_id, function(data) {
+        console.log("Likes count: " + data);
+        numberoflikes.innerHTML = data.toString();
+        usercontent.innerHTML = numberoflikes.innerHTML + ' Likes';
+      });
+   
 
     let content = document.createElement('p');
     let contentspan = document.createElement('span');
@@ -214,41 +244,47 @@ function createPostCard(Post){
 function getcommentnum(post_id){
     return 28;
 }
-function getLikesCount(id){
-    let xhr = new XMLHttpRequest(); //creating xml object
-        xhr.open("post", "countlike.php", true);
-        xhr.onload = () => {
-            if(xhr.readyState == XMLHttpRequest.DONE){
-                if(xhr.status == 200){
-                    let data = xhr.response; 
-                    return data;      
+function getLikesCount(id, callback) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "countlike.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          let data = xhr.responseText;
+          callback(data); // Call the callback function with the data
+        }
+      }
+    }
+  
+    xhr.send("post_id=" + id);
+  }
+  
+  // Example usage
+
+  
+
+function Like(id) {
+    console.log('liked');
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "like.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let data = xhr.responseText; // Use responseText instead of response
+                if (data === "success") {
+                    console.log(data);
                 }
+                console.log(data);
             }
         }
-    
-        xhr.send('post_id=' + id);
-    // return 63;
+    }
+
+    xhr.send("post_id=" + id);
 }
 
-function Like(id){
-    console.log('liked');
-    
-        let xhr = new XMLHttpRequest(); //creating xml object
-        xhr.open("post", "like.php", true);
-        xhr.onload = () => {
-            if(xhr.readyState == XMLHttpRequest.DONE){
-                if(xhr.status == 200){
-                    let data = xhr.response; 
-                    if(data == "success"){
-                        console.log(data);
-                    }
-                    console.log(data); 
-                }
-            }
-        }
-    
-        xhr.send('post_id=' + id);
-}
 function UnlikeLike(id){
     console.log('dislike');
     

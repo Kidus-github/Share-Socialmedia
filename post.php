@@ -4,12 +4,17 @@ include_once "config.php";
 
 
 $userID = $_SESSION['id'];
+$sql = mysqli_query($conn, "SELECT DISTINCT posts.*, user.fname, user.lname, user.profile_picture, 
+                             IF(`like`.user_id = '{$_SESSION['id']}', 1, 0) AS is_liked
+                             FROM posts 
+                             JOIN friends ON posts.user_id = friends.friend_id 
+                             JOIN user ON posts.user_id = user.id 
+                             LEFT JOIN `like` ON posts.post_id = `like`.post_id
+                             WHERE friends.user_id = '{$userID}' 
+                             AND friends.status = 'accepted'
+                             or `like`.user_id = '{$_SESSION['id']}'");
 
-$sql = mysqli_query($conn, "SELECT posts.*, user.fname , user.lname, user.profile_picture
-                    FROM posts 
-                    JOIN friends ON posts.user_id = friends.friend_id 
-                    JOIN user ON posts.user_id = user.id 
-                    WHERE friends.user_id = '{$userID}' and friends.status = 'accepted'");
+ 
 
 
   $data = array(); // Initialize an empty array to store the rows
@@ -30,7 +35,8 @@ $sql = mysqli_query($conn, "SELECT posts.*, user.fname , user.lname, user.profil
                 'location' => $row['location'],
                 'fname' => $row['fname'],
                 'lname' => $row['lname'],
-                'profile_picture' => $row['profile_picture']
+                'profile_picture' => $row['profile_picture'],
+                'is_liked' => $row['is_liked']
             );
         }
     }

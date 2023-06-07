@@ -330,6 +330,7 @@ header .header_right .search input{
 
 }
 .card .header-section .post_identity p{
+    width: max-content;
     font-weight: 200;
     font-size: 0.8em;
 }

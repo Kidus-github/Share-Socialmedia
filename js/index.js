@@ -18,6 +18,8 @@ let profile = document.getElementsByClassName('user');
 
 let profilepic = document.getElementsByClassName('profile');
 let profilepic2 = document.getElementsByClassName('profile-img');
+
+
 // let msg= document.querySelector('.msg p');
 
 explore[0].addEventListener('click', ()=>{
@@ -135,7 +137,8 @@ function fetchUserData() {
         userdata.notification_setting = data.notification_setting;
         userdata.last_login = data.last_login;
         userdata.login_count = data.login_count;
-
+        profilepic2.src = data.profile_picture;
+        profilepic.src = data.profile_picture;
         resolve(userdata);
       })
       .catch(error => {
