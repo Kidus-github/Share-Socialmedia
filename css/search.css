@@ -64,6 +64,7 @@
 
 }
 .search_input .content .fa-times{
+    cursor: pointer ;
     right: 20px;
 }
 .results{
@@ -92,10 +93,27 @@
     display: none;
 }
 .result-card{
+    cursor: pointer;
     padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.result-card .result_data{
+    display: flex;
+    align-items: center;
     gap: 10px;
+}
+.result-card button{
+    padding: 8px 15px;
+    color: white;
+    font-family: var(--Roboto-font);
+    font-weight: 300;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--primary-clr);
+    cursor: pointer;
 }
 .result-card:hover{
     background-color: var(--clr-nav-hover);

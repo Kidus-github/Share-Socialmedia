@@ -97,7 +97,7 @@ function createPostCard(Post){
     main_body.classList.add('main_body');
 
     //work on this later medea type check mareg alebet then if it is video it uses diffrent class and the document to be created should be video
-    //checkMedia(Post.media);
+    // checkMedia(Post.media);
 
     let postedimg = document.createElement('img');
     postedimg.src = Post.media;
@@ -143,7 +143,7 @@ function createPostCard(Post){
         }
         else{
             heart.src = dislike
-            UnlikeLike(id);
+            Unlike(id);
             let decrement = parseInt(numberoflikes.innerHTML);
             decrement--;
 
@@ -285,24 +285,26 @@ function Like(id) {
     xhr.send("post_id=" + id);
 }
 
-function UnlikeLike(id){
+
+function Unlike(id){
     console.log('dislike');
     
-        let xhr = new XMLHttpRequest(); //creating xml object
-        xhr.open("post", "unlike.php", true);
-        xhr.onload = () => {
-            if(xhr.readyState == XMLHttpRequest.DONE){
-                if(xhr.status == 200){
-                    let data = xhr.response; 
-                    if(data == "success"){
-                        console.log(data);
-                    }
-                    console.log(data); 
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "unlike.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let data = xhr.responseText; // Use responseText instead of response
+                if (data === "success") {
+                    console.log(data);
                 }
+                console.log(data);
             }
         }
-    
-        xhr.send('post_id=' + id);
+    }
+
+    xhr.send("post_id=" + id);
 }
 
 
